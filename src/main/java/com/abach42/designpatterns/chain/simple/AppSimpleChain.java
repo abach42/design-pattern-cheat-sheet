@@ -9,7 +9,7 @@ package com.abach42.designpatterns.chain.simple;
  * 
  * This example does not work with a data context and no decistion to process or pass. 
  */
-public class SimpleChain {
+public class AppSimpleChain {
     public static void main(String[] args) {
         AbstractHandler firstHandler = new FirstHandler();
         AbstractHandler secondHandler = new SecondHandler();
