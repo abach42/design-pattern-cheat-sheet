@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.abach42.design-patterns-cheat-sheet</groupId>
+  <artifactId>designpatterns</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+
+  <name>designpatterns</name>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>20</maven.compiler.source>
+    <maven.compiler.target>20</maven.compiler.target>
+  </properties>
+
+  <dependencies>
+    <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter -->
+    <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter</artifactId>
+        <version>5.10.2</version>
+        <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <build>
+      <sourceDirectory>${basedir}/src/main/java</sourceDirectory>
+      <testSourceDirectory>${basedir}/src/test/java</testSourceDirectory>
+      <outputDirectory>${basedir}/target/classes</outputDirectory>
+      <testOutputDirectory>${basedir}/target/test-classes</testOutputDirectory>
+    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+      <plugins>
+        <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
+        <plugin>
+          <artifactId>maven-clean-plugin</artifactId>
+          <version>3.1.0</version>
+        </plugin>
+        <!-- default lifecycle, jar packaging: see https://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_jar_packaging -->
+        <plugin>
+          <artifactId>maven-resources-plugin</artifactId>
+          <version>3.0.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.8.0</version>
+        </plugin>
+        <plugin>
+          <!-- see https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin
+             Maven Surefire plugin executes unit tests during the test phase of the Maven build lifecycle. Importantly, 
+             the Surefire plugin is called implicitly 
+             by the Maven life cycle whenever the test goal is executed — for example, when running ‘mvn test‘ or ‘mvn install‘.
+          -->
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>3.2.5</version>
+          <configuration>
+              <reportFormat>plain</reportFormat>
+              <consoleOutputReporter>
+                  <disable>true</disable>
+              </consoleOutputReporter>
+              <statelessTestsetInfoReporter implementation="org.apache.maven.plugin.surefire.extensions.junit5.JUnit5StatelessTestsetInfoTreeReporter"/>
+          </configuration>
+          <dependencies>
+              <!-- https://maven.apache.org/surefire/maven-surefire-plugin/examples/junit-platform.html#external-extensions-for-the-plugin-->
+              <dependency>
+                <groupId>me.fabriciorby</groupId>
+                <artifactId>maven-surefire-junit5-tree-reporter</artifactId>
+                <version>0.1.0</version>
+              </dependency>
+              <dependency>
+                  <groupId>org.junit.jupiter</groupId>
+                  <artifactId>junit-jupiter-engine</artifactId>
+                  <version>5.10.2</version>
+              </dependency>
+          </dependencies>
+        </plugin>
+        <plugin>
+          <artifactId>maven-jar-plugin</artifactId>
+          <version>3.0.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-install-plugin</artifactId>
+          <version>2.5.2</version>
+        </plugin>
+        <!-- site lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#site_Lifecycle -->
+        <plugin>
+          <artifactId>maven-site-plugin</artifactId>
+          <version>3.7.1</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+</project>
