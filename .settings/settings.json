@@ -1,0 +1,4 @@
+{
+    "name": "default",
+    "workingDirectory": "${workspaceFolder}"
+}
