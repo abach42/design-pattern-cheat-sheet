@@ -25,3 +25,5 @@ replay_pid*
 
 target/*
 !target/calculator*.jar
+
+*.vscode
