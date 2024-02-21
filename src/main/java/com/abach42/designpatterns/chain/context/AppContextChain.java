@@ -7,11 +7,10 @@ package com.abach42.designpatterns.chain.context;
  * It promotes loose coupling between the sender and receiver of a request and is commonly used in scenarios 
  * like event handling or middleware processing in web applications.
  * 
- * Here data context is used, but set on every handler constructor. 
+ * Here data context is used, but handler needs knowledge of handling next handler. 
  */
 public class AppContextChain {
     public static void main(String[] args) {
-
         AbstractHandler.MemberList list = new AbstractHandler.MemberList();
         list.add(new AbstractHandler.Member("John", 50));
         list.add(new AbstractHandler.Member("Doe", 62));

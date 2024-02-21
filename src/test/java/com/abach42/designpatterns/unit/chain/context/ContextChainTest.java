@@ -1,9 +1,7 @@
 package com.abach42.designpatterns.unit.chain.context;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.*;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -12,7 +10,7 @@ import com.abach42.designpatterns.chain.context.AbstractHandler;
 import com.abach42.designpatterns.chain.context.SortByAgeHandler;
 import com.abach42.designpatterns.chain.context.FilterHandler;
 
-public class ChainContextTest {
+public class ContextChainTest {
     @Test
     @DisplayName("chain not handles if emtpy")
     public void testChainNotHandlesIfEmpty() {
