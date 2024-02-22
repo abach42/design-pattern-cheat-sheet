@@ -1,7 +1,6 @@
 package com.abach42.designpatterns.unit.observer;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.*;
 
 import java.awt.Point;
 
