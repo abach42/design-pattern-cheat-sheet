@@ -8,9 +8,9 @@ import java.io.PrintStream;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import com.abach42.designpatterns.chain.simple.AbstractHandler;
-import com.abach42.designpatterns.chain.simple.FirstHandler;
-import com.abach42.designpatterns.chain.simple.SecondHandler;
+import com.abach42.designpatterns.behavioral.chain.simple.AbstractHandler;
+import com.abach42.designpatterns.behavioral.chain.simple.FirstHandler;
+import com.abach42.designpatterns.behavioral.chain.simple.SecondHandler;
 
 public class SimpleChainTest {
     
