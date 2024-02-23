@@ -6,7 +6,7 @@ package com.abach42.designpatterns.structural.decorator;
  * of concerns, as decorators can be combined in various ways to achieve different effects without 
  * modifying the original object.
  */
-public class DecoratorApp {
+public class AppDecorator {
     public static void main(String[] args) {
         Component order = new FoamMilkDecorator(
             new ChocolateDecorator(

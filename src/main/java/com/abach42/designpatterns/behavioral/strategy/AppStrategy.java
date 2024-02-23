@@ -5,7 +5,7 @@ package com.abach42.designpatterns.behavioral.strategy;
  * and make them interchangeable. 
  * It enables a client to choose a particular algorithm from the family of algorithms at runtime without altering the client's code.
  */
-public class StrategyApp {
+public class AppStrategy {
     public static void main(String[] args) {
         CalculatorContext calculator = new CalculatorContext();
         calculator.setBehavior(new AdditionStrategy());
