@@ -7,7 +7,7 @@ package com.abach42.designpatterns.behavioral.chain.simple;
  * It promotes loose coupling between the sender and receiver of a request and is commonly used in scenarios 
  * like event handling or middleware processing in web applications.
  * 
- * This example does not work with a data context and no decistion to process or pass. 
+ * This example does not work with a data context and no decision to process or pass. 
  */
 public class AppSimpleChain {
     public static void main(String[] args) {

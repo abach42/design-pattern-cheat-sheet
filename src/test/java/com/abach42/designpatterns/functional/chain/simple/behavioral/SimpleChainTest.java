@@ -1,4 +1,4 @@
-package com.abach42.designpatterns.functional.chain.simple;
+package com.abach42.designpatterns.functional.chain.simple.behavioral;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

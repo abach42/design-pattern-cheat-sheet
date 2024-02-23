@@ -11,6 +11,10 @@ public class FilterHandler implements Handable {
 
     @Override
     public Chain.MemberList handle(Chain.MemberList memberList) {
+        if (memberList.isEmpty()) {
+            return memberList;
+        }
+        
         Predicate<Chain.Member> filteredMember = member -> member.age() < minAge;
         memberList.removeIf(filteredMember);
 
