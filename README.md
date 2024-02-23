@@ -49,7 +49,7 @@ While the Singleton pattern can be useful in certain situations, it's also often
 
 The Decorator pattern allows you to stack decorators on top of each other, each adding its own behavior, and providing a flexible way to modify the behavior of individual objects at runtime. 
 
-:bulb: [Link to code example](src/main/java/com/abach42/designpatterns/structural/decorator/Decorator.java)
+:bulb: [Link to code example](src/main/java/com/abach42/designpatterns/structural/decorator/)
 
 :pill: [Link to test](src/test/java/com/abach42/designpatterns/unit/structural/decorator/DecoratorTest.java)
 
@@ -75,7 +75,7 @@ System.out.println(String.format("%.2f", order.calculatePrice()));
 
 :pencil2: The Chain of Responsibility pattern is a design pattern where a request is passed through a chain of handlers. Each handler decides either to process the request or pass it to the next handler in the chain. It promotes loose coupling between the sender and receiver of a request and is commonly used in scenarios like event handling or middleware processing in web applications.
 
-:bulb: [Link to code example](src/main/java/com/abach42/designpatterns/behavioral/chain/context/AbstractHandler.java)
+:bulb: [Link to code example](src/main/java/com/abach42/designpatterns/behavioral/chain/context/)
 
 :pill: [Link to test](src/test/java/com/abach42/designpatterns/unit/behavioral/chain/context/ContextChainTest.java)
 
@@ -97,7 +97,7 @@ AbstractHandler.initializeChain(
 
 This example does not work with a data context and no decision to process or pass. 
 
-:bulb: [Link to very simple code example](src/main/java/com/abach42/designpatterns/behavioral/chain/simple/AbstractHandler.java)
+:bulb: [Link to very simple code example](src/main/java/com/abach42/designpatterns/behavioral/chain/simple/)
 
 :pill: [Link to test](src/test/java/com/abach42/designpatterns/functional/chain/simple/behavioral/SimpleChainTest.java)
 
@@ -114,7 +114,7 @@ firstHandler.handle();
 
 Here data context is passed on process and handler does not care about handling next, building chain, stering handle tasks from outside of handle method. 
 
-:bulb: [Link to code example](src/main/java/com/abach42/designpatterns/behavioral/chain/delegation/Chain.java)
+:bulb: [Link to code example](src/main/java/com/abach42/designpatterns/behavioral/chain/delegation/)
 
 :pill: [Link to test](src/test/java/com/abach42/designpatterns/unit/behavioral/chain/delegation/DelegationChainTest.java)
 
@@ -149,7 +149,7 @@ if (memberList.isEmpty()) {
 
 :pencil2: The Observer Pattern is a design pattern where an object (the subject) maintains a list of its dependents (observers) and notifies them of any state changes. This allows for loose coupling between components, making it easier to maintain and extend the system. 
 
-:bulb: [Link to code example](src/main/java/com/abach42/designpatterns/behavioral/observer/ConcreteRoutingSubject.java)
+:bulb: [Link to code example](src/main/java/com/abach42/designpatterns/behavioral/observer/)
 
 :pill: [Link to test](src/test/java/com/abach42/designpatterns/unit/behavioral/observer/ObserverTest.java)
 
@@ -180,7 +180,7 @@ System.out.println(
 
 The key idea behind the Strategy pattern is to encapsulate algorithms into separate classes and make them interchangeable. This allows the client to select the appropriate algorithm at runtime.
 
-:bulb: [Link to code example](src/main/java/com/abach42/designpatterns/behavioral/strategy/CalculatorContext.java)
+:bulb: [Link to code example](src/main/java/com/abach42/designpatterns/behavioral/strategy/)
 
 :pill: [Link to test](src/test/java/com/abach42/designpatterns/unit/behavioral/strategy/StrategyTest.java)
 
