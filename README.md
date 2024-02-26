@@ -189,7 +189,7 @@ new Chain()
     .process(list);
 ```
 
-> Handling guard can vary in complexity can vary in complexity...
+> Handling guard can vary in complexity...
 
 ```java
 if (memberList.isEmpty()) {
