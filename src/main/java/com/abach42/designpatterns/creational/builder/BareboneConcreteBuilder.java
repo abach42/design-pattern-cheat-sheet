@@ -1,4 +1,4 @@
-package com.abach42.designpatterns.behavioral.builder;
+package com.abach42.designpatterns.creational.builder;
 
 public class BareboneConcreteBuilder extends Builder{
     @Override

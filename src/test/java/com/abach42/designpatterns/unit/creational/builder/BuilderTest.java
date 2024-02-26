@@ -1,4 +1,4 @@
-package com.abach42.designpatterns.unit.behavioral.builder;
+package com.abach42.designpatterns.unit.creational.builder;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -6,11 +6,11 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import com.abach42.designpatterns.behavioral.builder.BareboneConcreteBuilder;
-import com.abach42.designpatterns.behavioral.builder.BareboneProduct;
-import com.abach42.designpatterns.behavioral.builder.Director;
-import com.abach42.designpatterns.behavioral.builder.TowerConcreteBuilder;
-import com.abach42.designpatterns.behavioral.builder.TowerProduct;
+import com.abach42.designpatterns.creational.builder.BareboneConcreteBuilder;
+import com.abach42.designpatterns.creational.builder.BareboneProduct;
+import com.abach42.designpatterns.creational.builder.Director;
+import com.abach42.designpatterns.creational.builder.TowerConcreteBuilder;
+import com.abach42.designpatterns.creational.builder.TowerProduct;
 
 public class BuilderTest { 
     private Director director;
