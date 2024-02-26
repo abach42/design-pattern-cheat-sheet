@@ -57,11 +57,11 @@ String idProductB2 = secondFactory.createProductB().toString();
 
 ### Builder Pattern
 
-:pencil2: The Builder pattern is a creational pattern that composes data in steps and divides the build process from the presentation layer. It allows you to produce different types and representations of an object using the same construction process. This pattern is particularly useful when dealing with objects that have numerous parameters or configurations, as it provides a clear way to separate the construction logic from the rest of the code. See variants in test.
+:pencil2: The Builder pattern is a creational pattern that composes data in steps and divides the build process from the presentation layer. It allows you to produce different types and representations of an object using the same construction process. This pattern is particularly useful when dealing with objects that have numerous parameters or configurations, as it provides a clear way to separate the construction logic from the rest of the code. See variants in [test](src/test/java/com/abach42/designpatterns/unit/creational/builder/BuilderTest.java).
 
-:bulb: [Link to code example](src/main/java/com/abach42/designpatterns/behavioral/builder)
+:bulb: [Link to code example](src/main/java/com/abach42/designpatterns/creational/builder)
 
-:pill: [Link to test](src/test/java/com/abach42/designpatterns/unit/behavioral/builder/BuilderTest.java)
+:pill: [Link to test](src/test/java/com/abach42/designpatterns/unit/creational/builder/BuilderTest.java)
 
 #### Client Code example
 
