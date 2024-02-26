@@ -37,7 +37,6 @@ While the Singleton pattern can be useful in certain situations, it's also often
 ### Abstract Factory Pattern
 
 :pencil2: The Abstract Factory pattern is another creational design pattern that provides an interface for creating families of related or dependent objects without specifying their concrete classes. It's useful when you need to ensure that the created objects are compatible with each other and when you want to hide the implementation details of the creation process.
-The Abstract Factory pattern allows you to create families of related objects without specifying their concrete classes, making your code more flexible and easier to maintain. It promotes loose coupling between client code and the actual implementation of the products, as the client code only interacts with the abstract factory and abstract product interfaces.
 
 :bulb: [Link to code example](src/main/java/com/abach42/designpatterns/creational/abstractfactory)
 
