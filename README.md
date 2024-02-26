@@ -36,6 +36,25 @@ While the Singleton pattern can be useful in certain situations, it's also often
 ### Factory Method Pattern
 ### Abstract Factory Pattern
 ### Builder Pattern
+
+:pencil2: The Builder pattern is a creational pattern that composes data in steps and divides the build process from the presentation layer. It allows you to produce different types and representations of an object using the same construction process. This pattern is particularly useful when dealing with objects that have numerous parameters or configurations, as it provides a clear way to separate the construction logic from the rest of the code. See variants in test.
+
+:bulb: [Link to code example](src/main/java/com/abach42/designpatterns/behavioral/builder)
+
+:pill: [Link to test](src/test/java/com/abach42/designpatterns/unit/behavioral/builder/BuilderTest.java)
+
+#### Client Code example
+
+```java
+Director director = new Director();
+
+BareboneConcreteBuilder bareboneBuilder = new BareboneConcreteBuilder();
+director.constructBasicComputer(bareboneBuilder);
+BareboneProduct bareboneProduct = bareboneBuilder.build();
+
+System.out.println(bareboneProduct.toString());
+```
+
 ### Prototype Pattern
 
 ## Structural Patterns:
