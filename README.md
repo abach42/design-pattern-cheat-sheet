@@ -34,6 +34,24 @@ Singleton singleton = Singleton.getInstance();
 While the Singleton pattern can be useful in certain situations, it's also often considered an "anti-pattern" due to some of its drawbacks like hidden dependencies, concurrency issues, testing challenges. 
 
 ### Factory Method Pattern
+
+:pencil2: The Factory Method is a creational pattern that first defines a method that creates an object. Which type is instantiated is decided by the concrete class that implements this method.
+
+:bulb: [Link to code example](src/main/java/com/abach42/designpatterns/creational/factorymethod)
+
+:pill: [Link to test](src/test/java/com/abach42/designpatterns/unit/creational/factorymethod/FactoryMethodTest.java)
+
+```java
+Creator creator = new CircleCreator();
+Product product = creator.createProduct(new Point(100, 100));
+Shape shape = product.getShape();
+```
+```java
+Creator creator = new SquareCreator();
+Product product = creator.createProduct(new Point(100, 100));
+Shape shape =  product.getShape();
+```
+
 ### Abstract Factory Pattern
 
 :pencil2: The Abstract Factory pattern is another creational design pattern that provides an interface for creating families of related or dependent objects without specifying their concrete classes. It's useful when you need to ensure that the created objects are compatible with each other and when you want to hide the implementation details of the creation process.
@@ -46,12 +64,13 @@ While the Singleton pattern can be useful in certain situations, it's also often
 
 ```java
 AbstractFactory firstFactory = new ConcreteFactory1();
-String nameProductA1 = firstFactory.createProductA().toString();
-String idProductB1 = firstFactory.createProductB().toString();
-
+String resultA = firstFactory.createProductA().toString(); //"Name:ProductA1"
+String resultB = firstFactory.createProductB().toString(); //"Id:ProductB1"
+```
+```java
 AbstractFactory secondFactory = new ConcreteFactory2();
-String nameProductA2 = secondFactory.createProductA().toString();
-String idProductB2 = secondFactory.createProductB().toString();
+String resultA = secondFactory.createProductA().toString(); //"Name:ProductA2"
+String resultB = secondFactory.createProductB().toString(); //"Id:ProductB2"
 ```
 
 ### Builder Pattern
