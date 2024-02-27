@@ -1,6 +1,10 @@
-# Design patterns 
+# Gang of Four (GoF) design patterns
 
-A cheat sheet in Java for daily work.
+A cheat sheet of design patterns for your daily Java work. 
+
+Here are some hints and client codes to simplify decisions, links to example codes and tests to read function an meaning. 
+
+> Remark: The class names are oriented towards patterns to recognize the structure. In practice, one would choose the names based on their function.
 
 ## Creational Patterns:
 
@@ -94,6 +98,22 @@ System.out.println(bareboneProduct.toString());
 ```
 
 ### Prototype Pattern
+
+:pencil2:  The Prototype Pattern is a creational design pattern used to create objects based on a template of an existing object through cloning. It is particularly useful when the construction of a new instance is more efficient by copying an existing instance rather than creating it from scratch. 
+
+:bulb: [Link to code example](src/main/java/com/abach42/designpatterns/creational/prototype)
+
+:pill: [Link to test](src/test/java/com/abach42/designpatterns/unit/creational/prototype/PrototypeTest.java)
+
+```java
+CirclePrototype circlePrototype = new CirclePrototype();
+circlePrototype.x = 1;
+circlePrototype.y = 1;
+circlePrototype.radius = 10;
+circlePrototype.color = "blue";
+
+CirclePrototype circle = (CirclePrototype) circlePrototype.clone();
+```
 
 ## Structural Patterns:
 

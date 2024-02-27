@@ -44,5 +44,4 @@ public class FactoryMethodTest {
         assertInstanceOf(Rectangle.class, shape);
         assertEquals(expectedWidth, actualWidth);
     }
-}    
-
+}
