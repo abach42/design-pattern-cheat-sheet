@@ -19,7 +19,7 @@ public abstract class Prototype extends Point {
 
     @Override
     public boolean equals(Object comparison) {
-        if(false == comparison instanceof Prototype){
+        if(false == comparison instanceof Prototype) {
             return false;
         }
 
