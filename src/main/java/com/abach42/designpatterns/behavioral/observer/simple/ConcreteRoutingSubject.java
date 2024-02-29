@@ -1,4 +1,4 @@
-package com.abach42.designpatterns.behavioral.observer;
+package com.abach42.designpatterns.behavioral.observer.simple;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -4,9 +4,9 @@ A cheat sheet of design patterns for your daily Java work.
 
 Here are some hints and client codes to simplify decisions, links to example codes and tests to read function an meaning. 
 
-> Remark: The class names are oriented towards patterns to recognize the structure. In practice, one would choose the names based on their function.
+> Remark: The class names are oriented towards patterns to recognize the structure. In practice, one would choose the names based on their function. As well unit tests are not fully covering, just showing function of patterns. It is a cheat sheet focussing fast election of patterns - or not to use some to avoid over engineering. 
 
-## Creational Patterns:
+## Creational Patterns
 
 ### Singleton Pattern
 
@@ -115,7 +115,7 @@ circlePrototype.color = "blue";
 CirclePrototype circle = (CirclePrototype) circlePrototype.clone();
 ```
 
-## Structural Patterns:
+## Structural Patterns
 
 ### Adapter Pattern
 ### Bridge Pattern
@@ -146,7 +146,7 @@ System.out.println(String.format("%.2f", order.calculatePrice()));
 ### Flyweight Pattern
 ### Proxy Pattern
 
-## Behavioral Patterns:
+## Behavioral Patterns
 
 ### Chain of Responsibility Pattern
 
@@ -226,9 +226,9 @@ if (memberList.isEmpty()) {
 
 :pencil2: The Observer Pattern is a design pattern where an object (the subject) maintains a list of its dependents (observers) and notifies them of any state changes. This allows for loose coupling between components, making it easier to maintain and extend the system. 
 
-:bulb: [Link to code example](src/main/java/com/abach42/designpatterns/behavioral/observer/)
+:bulb: [Link to code example](src/main/java/com/abach42/designpatterns/behavioral/observer/simple/)
 
-:pill: [Link to test](src/test/java/com/abach42/designpatterns/unit/behavioral/observer/ObserverTest.java)
+:pill: [Link to test](src/test/java/com/abach42/designpatterns/unit/behavioral/observer/simple/ObserverSimpleTest.java)
 
 #### Client Code example
 
@@ -239,7 +239,7 @@ new CalculateDistanceObserver(subject);
 new CalculateDurationObserver(subject);
         
 RouteEntity route = new RouteEntity("way home", new Point(0,0), new Point(20,20));
-
+//subject.detachObserver(/*some concrete observer*/);
 subject.setStateEntity(route);
 
 System.out.println(
@@ -249,6 +249,16 @@ System.out.println(
 );
 
 ```
+
+#### Variant delegating event handling using java.beans.PropertyChangeListener
+
+This example makes use of PropertyChangeListener-API of java.beans module. It delegates notification and verification of state change to module. Even registration of listeners will be supportet in PropertyChangeListener. 
+
+Client code example, see above - interface did not change. 
+
+:bulb: [Link to code example](src/main/java/com/abach42/designpatterns/behavioral/observer/propertychange/)
+
+:pill: [Link to test](src/test/java/com/abach42/designpatterns/unit/behavioral/observer/propertychange/ObserverPropertyChangeTest.java)
  
 ### State Pattern
 ### Strategy Pattern

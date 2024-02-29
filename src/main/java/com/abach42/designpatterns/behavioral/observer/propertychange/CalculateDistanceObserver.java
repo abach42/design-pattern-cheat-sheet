@@ -1,16 +1,13 @@
-package com.abach42.designpatterns.behavioral.observer;
+package com.abach42.designpatterns.behavioral.observer.propertychange;
 
 public class CalculateDistanceObserver extends AbstractObserver {
-    public CalculateDistanceObserver(Subject subject) {
+    public CalculateDistanceObserver(ConcreteRoutingSubject subject) {
         super(subject);
-    }
-
-    @Override
-    public void update() {
-       RouteEntity entity = this.subject.getStateEntity();
-       double distance = calculateDistance(entity);
-
-       entity.setDistance(distance);
+        
+        this.visitor = (RouteEntity entity) -> {
+            double distance = calculateDistance(entity);
+            entity.setDistance(distance);
+        };
     }
 
     private double calculateDistance(RouteEntity entity) {

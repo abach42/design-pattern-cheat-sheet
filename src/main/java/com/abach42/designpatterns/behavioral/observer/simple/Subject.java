@@ -1,4 +1,4 @@
-package com.abach42.designpatterns.behavioral.observer;
+package com.abach42.designpatterns.behavioral.observer.simple;
 
 public interface Subject {
     public void attachObserver(AbstractObserver observer);

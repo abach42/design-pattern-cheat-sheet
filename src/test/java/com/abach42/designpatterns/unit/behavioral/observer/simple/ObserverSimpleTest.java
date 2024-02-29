@@ -1,4 +1,4 @@
-package com.abach42.designpatterns.unit.behavioral.observer;
+package com.abach42.designpatterns.unit.behavioral.observer.simple;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -7,13 +7,13 @@ import java.awt.Point;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import com.abach42.designpatterns.behavioral.observer.AbstractObserver;
-import com.abach42.designpatterns.behavioral.observer.CalculateDistanceObserver;
-import com.abach42.designpatterns.behavioral.observer.CalculateDurationObserver;
-import com.abach42.designpatterns.behavioral.observer.ConcreteRoutingSubject;
-import com.abach42.designpatterns.behavioral.observer.RouteEntity;
+import com.abach42.designpatterns.behavioral.observer.simple.AbstractObserver;
+import com.abach42.designpatterns.behavioral.observer.simple.CalculateDistanceObserver;
+import com.abach42.designpatterns.behavioral.observer.simple.CalculateDurationObserver;
+import com.abach42.designpatterns.behavioral.observer.simple.ConcreteRoutingSubject;
+import com.abach42.designpatterns.behavioral.observer.simple.RouteEntity;
 
-public class ObserverTest {
+public class ObserverSimpleTest {
     @Test
     @DisplayName("Observers listen and change routing information, distance and duration")
     public void testObserversListenAndChangeRoutingInformation() {
@@ -22,11 +22,10 @@ public class ObserverTest {
         new CalculateDurationObserver(subject);
         
         RouteEntity route = new RouteEntity("way home", new Point(0,0), new Point(20,20));
-
         subject.setStateEntity(route);
 
-        assertNotEquals(0.0, route.getDistance());
-        assertNotEquals(0.0F, route.getDestination());
+        assertEquals(28.284271, route.getDistance(), 0.000001);
+        assertEquals(5.656854, route.getDuration(), 0.000001);
     }
 
     @Test
@@ -35,13 +34,12 @@ public class ObserverTest {
         ConcreteRoutingSubject subject = new ConcreteRoutingSubject();
         new CalculateDistanceObserver(subject);
         AbstractObserver durationObserver =  new CalculateDurationObserver(subject);
+        subject.detachObserver(durationObserver);
         
         RouteEntity route = new RouteEntity("way home", new Point(0,0), new Point(20,20));
-
-        subject.detachObserver(durationObserver);
         subject.setStateEntity(route);
 
-        assertNotEquals(0.0, route.getDistance());
+        assertEquals(28.284271, route.getDistance(), 0.000001);
         assertEquals(0.0F, route.getDuration());
     }
 }

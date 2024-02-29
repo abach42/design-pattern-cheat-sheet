@@ -1,4 +1,4 @@
-package com.abach42.designpatterns.behavioral.observer;
+package com.abach42.designpatterns.behavioral.observer.propertychange;
 
 import java.awt.Point;
 import java.util.Objects;

@@ -1,4 +1,4 @@
-package com.abach42.designpatterns.behavioral.observer;
+package com.abach42.designpatterns.behavioral.observer.simple;
 
 public abstract class AbstractObserver {
     protected Subject subject;

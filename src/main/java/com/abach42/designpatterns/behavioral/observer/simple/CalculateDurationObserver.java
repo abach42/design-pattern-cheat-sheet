@@ -1,4 +1,4 @@
-package com.abach42.designpatterns.behavioral.observer;
+package com.abach42.designpatterns.behavioral.observer.simple;
 
 public class CalculateDurationObserver extends AbstractObserver {
     private static final int SPEED = 5; 
