@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import java.security.InvalidParameterException;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -16,11 +17,18 @@ import com.abach42.designpatterns.behavioral.command.PersonSetReceiver;
 import com.abach42.designpatterns.behavioral.command.UpdatePersonCommand;
 
 public class ComandTest {
+    PersonInvoker invoker;
+    PersonSetReceiver list;
+
+    @BeforeEach
+    public void setUp() {
+        invoker = new PersonInvoker();
+        list = new PersonSetReceiver();
+    }
+
     @Test
     @DisplayName("Should create a 'Person' element")
     public void testCreateCommand() {
-        PersonInvoker invoker = new PersonInvoker();
-        PersonSetReceiver list = new PersonSetReceiver();
         invoker.setCommand(new CreatePersonCommand(list, new Person("John", 62)));
         invoker.runCommand();
 
@@ -32,8 +40,6 @@ public class ComandTest {
     @Test
     @DisplayName("Should create multiple 'Person' elements")
     public void testCreateCommandCreateMultipleElements() {
-        PersonInvoker invoker = new PersonInvoker();
-        PersonSetReceiver list = new PersonSetReceiver();
         invoker.setCommand(new CreatePersonCommand(list, new Person("John", 62)));
         invoker.setCommand(new CreatePersonCommand(list, new Person("Peter", 43)));
         invoker.setCommand(new CreatePersonCommand(list, new Person("James", 21)));
@@ -47,8 +53,6 @@ public class ComandTest {
     @Test
     @DisplayName("Should update a 'Person' element")
     public void testUpdateElement() {
-        PersonInvoker invoker = new PersonInvoker();
-        PersonSetReceiver list = new PersonSetReceiver();
         invoker.setCommand(new CreatePersonCommand(list, new Person( "Saul", 62)));
         invoker.setCommand(new UpdatePersonCommand(list, new Person(1L, "Paul", 34)));
         invoker.runCommand();
@@ -62,8 +66,6 @@ public class ComandTest {
     @Test
     @DisplayName("Should delete a 'Person' element")
     public void testDeleteElement() {
-        PersonInvoker invoker = new PersonInvoker();
-        PersonSetReceiver list = new PersonSetReceiver();
         invoker.setCommand(new CreatePersonCommand(list, new Person("Peter", 62)));
         invoker.setCommand(new DeletePersonCommand(list, new Person(1L)));
         invoker.runCommand();
@@ -74,8 +76,6 @@ public class ComandTest {
     @Test
     @DisplayName("Should throw because Id missing")
     public void testDeletionWhithoutIdFails() {
-        PersonInvoker invoker = new PersonInvoker();
-        PersonSetReceiver list = new PersonSetReceiver();
         invoker.setCommand(new CreatePersonCommand(list, new Person("Peter", 62)));
         invoker.setCommand(new DeletePersonCommand(list, new Person(null)));
 
