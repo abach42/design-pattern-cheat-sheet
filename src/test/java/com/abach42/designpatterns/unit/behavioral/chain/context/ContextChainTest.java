@@ -57,4 +57,3 @@ public class ContextChainTest {
         assertFalse(list.contains(new AbstractHandler.Member("Marilyn", 32)));
     }
 }
-

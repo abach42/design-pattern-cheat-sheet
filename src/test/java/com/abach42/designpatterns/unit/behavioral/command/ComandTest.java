@@ -81,4 +81,4 @@ public class ComandTest {
 
         assertThrows(InvalidParameterException.class, () -> invoker.runCommand());
     }
-}    
+}

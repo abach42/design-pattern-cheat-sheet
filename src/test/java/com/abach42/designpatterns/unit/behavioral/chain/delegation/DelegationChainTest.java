@@ -56,4 +56,3 @@ public class DelegationChainTest {
         assertFalse(list.contains(new Chain.Member("Marilyn", 32)));
     }
 }
-

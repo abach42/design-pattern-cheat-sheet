@@ -118,6 +118,25 @@ CirclePrototype circle = (CirclePrototype) circlePrototype.clone();
 ## Structural Patterns
 
 ### Adapter Pattern
+:pencil2: The Adapter pattern is a design pattern that allows adapting the interface of an existing object so that it can be used by a class that was originally incompatible with this object. The Adapter pattern is often used to integrate existing class libraries or other external APIs without needing to change their codebase.
+
+The Adapter pattern consists of four main components:
+* A Target interface, which represents the interface that the class using the Adapter pattern wants to use.
+* An Adaptee class, which is the class to be integrated but does not implement the Target interface.
+* An Adapter class, which implements the Adaptee class and the Target interface. The Adapter class then translates the method calls of the Target interface into method calls to the Adaptee class.
+
+:bulb: [Link to code example](src/main/java/com/abach42/designpatterns/structural/adapter)
+
+:pill: [Link to test](src/test/java/com/abach42/designpatterns/unit/structural/adapter/AdapterTest.java)
+
+```java
+ApiAdaptee<String> fakeApiAdaptee = () -> "{\"id\": 42, \"name\": \"John Doe\"}";
+Target<Record> apiTarget = new ApiAdapter(fakeApiAdaptee);
+Record actualRecord = apiTarget.fetchData();
+Record expeRecord = new Target.Record(42, "John Doe");
+```
+In this example fakeApiAdaptee represents an external code or api whithout code insight. 
+
 ### Bridge Pattern
 ### Composite Pattern
 ### Decorator Pattern

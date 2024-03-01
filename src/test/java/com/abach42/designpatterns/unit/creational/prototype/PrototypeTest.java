@@ -10,7 +10,6 @@ import com.abach42.designpatterns.creational.prototype.CirclePrototype;
 import com.abach42.designpatterns.creational.prototype.SquarePrototype;
 
 public class PrototypeTest {
-
     @Test
     @DisplayName("Circles Should have different identity but same values")
     public void testCircleShouldBeNotSameButEqual() {

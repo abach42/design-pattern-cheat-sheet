@@ -19,7 +19,6 @@ import com.abach42.designpatterns.structural.decorator.HouseBlendComponent;
 import com.abach42.designpatterns.structural.decorator.Soy;
 
 public class DecoratorTest {
-
     @DisplayName("Should calculate the correct sum")
     @MethodSource("decoratorProvider")
     @ParameterizedTest(name = "{0}: price = {2}")
