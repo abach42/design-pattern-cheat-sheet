@@ -218,6 +218,32 @@ if (memberList.isEmpty()) {
 ```
 
 ### Command Pattern
+
+:pencil2: The Command pattern encapsulates a request as an object, allowing other objects to parameterize with different requests, enqueue commands in queues, log them, or support undo operations.
+This behavioral pattern separates tasks into small steps, enabling high reusability and can be used asynchronous concurrency.
+
+:bulb: [Link to code example](src/main/java/com/abach42/designpatterns/behavioral/command)
+
+:pill: [Link to test](src/test/java/com/abach42/designpatterns/unit/behavioral/command/ComandTest.java)
+
+##### Client Code example
+
+In this example receiver gets together with data storge object, this even can be separated. Obvious `Person` type is immutable but not used as record to provide multiple constructors. 
+
+```java
+PersonInvoker invoker = new PersonInvoker();
+PersonSetReceiver list = new PersonSetReceiver();
+
+invoker.setCommand(new CreatePersonCommand(list, new Person("John", 62)));
+invoker.setCommand(new CreatePersonCommand(list, new Person("Peter", 43)));
+invoker.setCommand(new CreatePersonCommand(list, new Person("James", 21)));
+
+invoker.setCommand(new UpdatePersonCommand(list, new Person(1L, "Paul", 34)));
+invoker.setCommand(new DeletePersonCommand(list, new Person(1L)));
+
+invoker.runCommand();
+``` 
+
 ### Interpreter Pattern
 ### Iterator Pattern
 ### Mediator Pattern
