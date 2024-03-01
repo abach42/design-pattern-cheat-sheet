@@ -74,7 +74,7 @@ public class ComandTest {
     }
 
     @Test
-    @DisplayName("Should throw because Id missing")
+    @DisplayName("Should throw because Id missing on delete")
     public void testDeletionWhithoutIdFails() {
         invoker.setCommand(new CreatePersonCommand(list, new Person("Peter", 62)));
         invoker.setCommand(new DeletePersonCommand(list, new Person(null)));

@@ -308,3 +308,47 @@ calculator.calculate(2,6); // 12
 ```
 ### Template Method Pattern
 ### Visitor Pattern
+
+:pencil2: Visitor pattern allows operations to be performed on elements of a structure without knowing the elements themselves. This is achieved by defining a separate "Visitor" class that provides specific operations for each element of the structure. The elements of the structure then implement an "accept" method, which allows the Visitor to perform the operations on the element.
+
+The Visitor pattern is often used in scenarios where one wants to perform operations on various elements of a structure without knowing the elements themselves or changing their class hierarchy. It provides a way to make behavioral changes to elements of a structure without modifying the elements themselves. It encapulates tasks as separation of concerns. 
+
+:bulb: [Link to code example](src/main/java/com/abach42/designpatterns/behavioral/visitor)
+
+:pill: [Link to test](src/test/java/com/abach42/designpatterns/unit/behavioral/visitor/VisitorTest.java)
+
+#### Client Code example
+
+Visitor methods in this example are divied by override of different element types. 
+Element-visitation methods named by their certain element is possible, too. 
+
+```java
+ObjectStructure zoo = new ObjectStructure();
+zoo.addAnimal(new LionElement());
+zoo.addAnimal(new ElephantElement());
+
+Visitor feedingVisitor = new FeedingVisitor();
+Visitor VeterinarianVisitor = new VeterinarianVisitor();
+zoo.visitAnimals(feedingVisitor);
+zoo.visitAnimals(VeterinarianVisitor);
+```
+
+You could make use of functional interface of `Consumer` instead of defining accept on your own: 
+
+```diff
++ import java.util.function.Consumer;
+
+- public interface Element {
++ public interface Element extends Consumer<Visitor> {
+-   void accept(Visitor visitor);
+-
+    boolean isFedUp();
+    boolean isHealthChecked();
+```
+
+Loop in `ObjectStructure` would do same job: 
+```diff
+public void visitAnimals(Visitor visitor) {
+    animals.forEach(element -> element.accept(visitor));
+}
+```
