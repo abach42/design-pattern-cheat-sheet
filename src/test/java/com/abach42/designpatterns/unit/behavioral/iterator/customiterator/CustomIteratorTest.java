@@ -16,7 +16,7 @@ import com.abach42.designpatterns.behavioral.iterator.customiterator.ConcreteAgg
 public class CustomIteratorTest {
 
     @Test
-    @DisplayName("Test Iterator")
+    @DisplayName("should iterate on custom iterator")
     void testIteratorPattern() {
         
         List<Integer> numbers = new ArrayList<>();
@@ -39,7 +39,7 @@ public class CustomIteratorTest {
     }
 
     @Test
-    @DisplayName("Test empty Iterator")
+    @DisplayName("should iterate if empty")
     void testIteratorException() {
         List<Integer> numbers = new ArrayList<>();
         ConcreteAggregate<Integer> aggregate = new ConcreteAggregate<>(numbers);

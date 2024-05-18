@@ -11,7 +11,7 @@ import com.abach42.designpatterns.behavioral.memento.Originator;
 public class MementoTest {
     
     @Test
-    @DisplayName("Test Memento change and restore History")
+    @DisplayName("Test Memento change and restore history")
     public void testMenento() {
         Originator originator = new Originator("foo");
         

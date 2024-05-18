@@ -13,7 +13,7 @@ import com.abach42.designpatterns.behavioral.iterator.simple.ConcreteAggregate;
 public class SimpleIteratorTest {
 
     @Test
-    @DisplayName("Test Iterator")
+    @DisplayName("should iterate")
     void testIteratorPattern() {
         List<Integer> numbers = new ArrayList<>();
         numbers.add(1);

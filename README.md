@@ -122,8 +122,8 @@ CirclePrototype circle = (CirclePrototype) circlePrototype.clone();
 
 The Adapter pattern consists of four main components:
 * A Target interface, which represents the interface that the class using the Adapter pattern wants to use.
-* An Adaptee class, which is the class to be integrated but does not implement the Target interface.
-* An Adapter class, which implements the Adaptee class and the Target interface. The Adapter class then translates the method calls of the Target interface into method calls to the Adaptee class.
+* An 'Adaptee' class, which is the class to be integrated but does not implement the Target interface.
+* An Adapter class, which implements the 'Adaptee' class and the Target interface. The Adapter class then translates the method calls of the Target interface into method calls to the 'Adaptee' class.
 
 :bulb: [Link to code example](src/main/java/com/abach42/designpatterns/structural/adapter)
 
@@ -135,7 +135,7 @@ Target<Record> apiTarget = new ApiAdapter(fakeApiAdaptee);
 Record actualRecord = apiTarget.fetchData();
 Record expeRecord = new Target.Record(42, "John Doe");
 ```
-In this example fakeApiAdaptee represents an external code or api whithout code insight. 
+In this example fakeApiAdaptee represents an external code or api without code insight. 
 
 ### Bridge Pattern
 ### Composite Pattern
@@ -257,7 +257,7 @@ String actualFooBar = originator.getState();
 
 ##### Client Code example
 
-In this example receiver gets together with data storge object, this even can be separated. Obvious `Person` type is immutable but not used as record to provide multiple constructors. 
+In this example receiver gets together with data storage object, this even can be separated. Obvious `Person` type is immutable but not used as record to provide multiple constructors. 
 
 ```java
 PersonInvoker invoker = new PersonInvoker();
@@ -274,6 +274,20 @@ invoker.runCommand();
 ``` 
 
 ### Interpreter Pattern
+
+:pencil2: The Interpreter Pattern defines a grammatical representation for a language and provides an interpreter to process sentences in the language. This pattern is useful for designing a syntax tree structure that can interpret sentences, commands, or expressions, allowing for language processing within the software. By encapsulating language-specific grammar and interpretation logic, the Interpreter Pattern simplifies the implementation of complex parsing and evaluation tasks, making it easier to maintain and extend language features.
+
+:bulb: [Link to code example](src/main/java/com/abach42/designpatterns/behavioral/interpreter)
+
+:pill: [Link to test](src/test/java/com/abach42/designpatterns/unit/behavioral/interpreter/InterpreterTest.java)
+
+```java       
+Context context = new Context('A');
+Interpreter vowelInterpreter = new VowelInterpreter();
+
+vowelInterpreter.interpret(context.character());
+```
+
 ### Iterator Pattern
 
 :pencil2: The Iterator Pattern simplifies traversing collections without exposing their structure. With a custom iterator, you can tailor traversal to specific needs. Java's built-in iterators streamline iteration over standard collections, ensuring consistency and interoperability. 
@@ -312,6 +326,14 @@ while (iterator.hasNext()) {
 
 :pill: [Link to test](src/test/java/com/abach42/designpatterns/unit/behavioral/memento/MementoTest.java)
 
+```java       
+Originator originator = new Originator("foo");
+Caretaker caretaker = new Caretaker();
+originator.changeState("bar");
+caretaker.addMemento(originator.createSnapshot());
+originator.restoreSnapshot(caretaker.getMemento(0));
+String actualFooBar = originator.getState();
+```
 ### Observer Pattern
 
 :pencil2: The Observer Pattern is a design pattern where an object (the subject) maintains a list of its dependents (observers) and notifies them of any state changes. This allows for loose coupling between components, making it easier to maintain and extend the system. 
@@ -342,7 +364,7 @@ System.out.println(
 
 #### Variant delegating event handling using java.beans.PropertyChangeListener
 
-This example makes use of PropertyChangeListener-API of java.beans module. It delegates notification and verification of state change to module. Even registration of listeners will be supportet in PropertyChangeListener. 
+This example makes use of PropertyChangeListener-API of java.beans module. It delegates notification and verification of state change to module. Even registration of listeners will be supported in PropertyChangeListener. 
 
 Client code example, see above - interface did not change. 
 
@@ -375,7 +397,7 @@ calculator.calculate(2,6); // 12
 
 :pencil2: Visitor pattern allows operations to be performed on elements of a structure without knowing the elements themselves. This is achieved by defining a separate "Visitor" class that provides specific operations for each element of the structure. The elements of the structure then implement an "accept" method, which allows the Visitor to perform the operations on the element.
 
-The Visitor pattern is often used in scenarios where one wants to perform operations on various elements of a structure without knowing the elements themselves or changing their class hierarchy. It provides a way to make behavioral changes to elements of a structure without modifying the elements themselves. It encapulates tasks as separation of concerns. 
+The Visitor pattern is often used in scenarios where one wants to perform operations on various elements of a structure without knowing the elements themselves or changing their class hierarchy. It provides a way to make behavioral changes to elements of a structure without modifying the elements themselves. 
 
 :bulb: [Link to code example](src/main/java/com/abach42/designpatterns/behavioral/visitor)
 
@@ -383,7 +405,7 @@ The Visitor pattern is often used in scenarios where one wants to perform operat
 
 #### Client Code example
 
-Visitor methods in this example are divied by override of different element types. 
+Visitor methods in this example are divided by override of different element types. 
 Element-visitation methods named by their certain element is possible, too. 
 
 ```java
