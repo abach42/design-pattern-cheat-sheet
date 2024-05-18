@@ -275,7 +275,7 @@ invoker.runCommand();
 
 ### Interpreter Pattern
 
-:pencil2: The Interpreter Pattern defines a grammatical representation for a language and provides an interpreter to process sentences in the language. This pattern is useful for designing a syntax tree structure that can interpret sentences, commands, or expressions, allowing for language processing within the software. By encapsulating language-specific grammar and interpretation logic, the Interpreter Pattern simplifies the implementation of complex parsing and evaluation tasks, making it easier to maintain and extend language features.
+:pencil2: The Interpreter Pattern defines a representation for a status and provides an interpreter to process it into another form. This pattern is useful for designing a syntax tree structure that can interpret sentences, commands, or expressions, allowing for language processing within the software. By encapsulating language-specific grammar and interpretation logic, the Interpreter Pattern simplifies the implementation of complex parsing and evaluation tasks, making it easier to maintain and extend language features.
 
 :bulb: [Link to code example](src/main/java/com/abach42/designpatterns/behavioral/interpreter)
 
