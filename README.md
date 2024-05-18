@@ -318,6 +318,30 @@ while (iterator.hasNext()) {
 ```
 
 ### Mediator Pattern
+
+:pencil2: The Mediator pattern is a behavioral design pattern that allows objects to communicate with each other without needing to know each other's implementation. 
+When a 'colleague' sends a message through the mediator, the mediator distributes the message to all other 'colleagues' except the sender. This bidirectional communication demonstrates the Mediator pattern's central idea: decoupling the objects communicating with each other by introducing a mediator object. Instead of directly interacting with each other, objects communicate through the mediator, which encapsulates the communication logic and facilitates indirect communication between them.
+ 
+:bulb: [Link to code example](src/main/java/com/abach42/designpatterns/behavioral/mediator/)
+
+:pill: [Link to test](src/test/java/com/abach42/designpatterns/unit/behavioral/mediator/MediatorTest.java)
+
+```java       
+Mediator mediator = new Mediator();
+
+ConcreteGermanColleague germanColleague = new ConcreteGermanColleague(mediator);
+ConcretePolishColleague polishColleague = new ConcretePolishColleague(mediator);
+
+mediator.addColleague(germanColleague);
+mediator.addColleague(polishColleague);
+
+germanColleague.send("Schönes Wetter!");
+polishColleague.send("ładna pogoda!");
+
+polishColleague.getLastReceivedMessage(); // "Witaj świecie: Schönes Wetter!"
+germanColleague.getLastReceivedMessage(); // "Hallo Welt: ładna pogoda!"
+```
+
 ### Memento Pattern
 
 :pencil2: The Memento pattern enables the capture and externalization of an object's internal state, without violating encapsulation. It achieves this by allowing an object to create a memento object that stores its state, which can later be restored to the object. This pattern is particularly useful in scenarios where the state of an object needs to be saved and restored, such as in undo mechanisms or checkpoints in an application. 
