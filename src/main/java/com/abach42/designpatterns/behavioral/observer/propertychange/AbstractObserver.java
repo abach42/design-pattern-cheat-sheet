@@ -12,8 +12,11 @@ public abstract class AbstractObserver implements PropertyChangeListener {
     public AbstractObserver(Subject subject) {
         this.subject = subject;
         this.entity = this.subject.getRouteEntity();
+    }
 
-        subject.attachObserver(this);
+    public static <T extends AbstractObserver> T createAndAttach(T observer) {
+        observer.subject.attachObserver(observer);
+        return observer;
     }
 
     @Override

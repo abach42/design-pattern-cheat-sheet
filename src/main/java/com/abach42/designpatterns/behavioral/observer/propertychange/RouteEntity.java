@@ -57,7 +57,19 @@ public class RouteEntity {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        RouteEntity that = (RouteEntity) o;
+        return Double.compare(that.distance, distance) == 0 &&
+                Float.compare(that.duration, duration) == 0 &&
+                Objects.equals(name, that.name) &&
+                Objects.equals(location, that.location) &&
+                Objects.equals(destination, that.destination);
+    }
+
+    @Override
     public int hashCode() {
-        return Objects.hash(this.location, this.destination);
+        return Objects.hash(name, location, destination, distance, duration);
     }
 }

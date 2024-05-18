@@ -6,9 +6,9 @@ public class CalculateDurationObserver extends AbstractObserver {
     public CalculateDurationObserver(ConcreteRoutingSubject subject) {
         super(subject);
         
-        this.visitor = (RouteEntity entity) -> {
-            float duration = calculateDuration(entity);
-            entity.setDuration(duration);
+        this.visitor = (RouteEntity routeEntity) -> {
+            float calculatedDuration = calculateDuration(routeEntity);
+            routeEntity.setDuration(calculatedDuration);
         };
     }
 

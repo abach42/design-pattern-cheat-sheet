@@ -4,9 +4,9 @@ public class CalculateDistanceObserver extends AbstractObserver {
     public CalculateDistanceObserver(ConcreteRoutingSubject subject) {
         super(subject);
         
-        this.visitor = (RouteEntity entity) -> {
-            double distance = calculateDistance(entity);
-            entity.setDistance(distance);
+        this.visitor = (RouteEntity routeEntity) -> {
+            double calculatedDistance  = calculateDistance(routeEntity);
+            routeEntity.setDistance(calculatedDistance );
         };
     }
 

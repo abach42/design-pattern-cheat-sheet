@@ -7,6 +7,7 @@ import java.awt.Point;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import com.abach42.designpatterns.behavioral.observer.propertychange.AbstractObserver;
 import com.abach42.designpatterns.behavioral.observer.propertychange.CalculateDistanceObserver;
 import com.abach42.designpatterns.behavioral.observer.propertychange.CalculateDurationObserver;
 import com.abach42.designpatterns.behavioral.observer.propertychange.ConcreteRoutingSubject;
@@ -17,8 +18,8 @@ public class ObserverPropertyChangeTest {
     @DisplayName("Observers listen and change routing information, distance and duration")
     public void testObserversListenAndChangeRoutingInformation() {
         ConcreteRoutingSubject subject = new ConcreteRoutingSubject();
-        new CalculateDistanceObserver(subject);
-        new CalculateDurationObserver(subject);
+        AbstractObserver.createAndAttach(new CalculateDistanceObserver(subject));
+        AbstractObserver.createAndAttach(new CalculateDurationObserver(subject));
         
         RouteEntity route = new RouteEntity("way home", new Point(0,0), new Point(20,20));
         subject.setRouteEntity(route);
@@ -31,7 +32,7 @@ public class ObserverPropertyChangeTest {
     @DisplayName("Observers listen and change distance but not duration")
     public void testObserverListenAndChangePartly() {
         ConcreteRoutingSubject subject = new ConcreteRoutingSubject();
-        new CalculateDistanceObserver(subject);
+        AbstractObserver.createAndAttach(new CalculateDistanceObserver(subject));
         CalculateDurationObserver durationObserver =  new CalculateDurationObserver(subject);
         subject.detachObserver(durationObserver);
         

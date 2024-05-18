@@ -6,12 +6,13 @@ import java.beans.PropertyChangeSupport;
 public class ConcreteRoutingSubject implements Subject {
 
     private RouteEntity routeEntity;
-    private PropertyChangeSupport propertyChangeSupport;
+    private final PropertyChangeSupport propertyChangeSupport;
 
     public ConcreteRoutingSubject() {
         propertyChangeSupport = new PropertyChangeSupport(this);
     }
 
+    @Override
     public void setRouteEntity(RouteEntity routeEntity) {
         RouteEntity oldValue = this.routeEntity;
         this.routeEntity = routeEntity;
@@ -20,6 +21,7 @@ public class ConcreteRoutingSubject implements Subject {
         propertyChangeSupport.firePropertyChange(subjectName, oldValue, routeEntity);
     }
 
+    @Override
     public RouteEntity getRouteEntity() {
         return this.routeEntity;
     }
