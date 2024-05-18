@@ -4,7 +4,7 @@ A cheat sheet of design patterns for your daily Java work.
 
 Here are some hints and client codes to simplify decisions, links to example codes and tests to read function an meaning. 
 
-> Remark: The class names are oriented towards patterns to recognize the structure. In practice, one would choose the names based on their function. As well unit tests are not fully covering, just showing function of patterns. It is a cheat sheet focussing fast election of patterns - or not to use some to avoid over engineering. 
+> Remark: The class names are oriented towards patterns to recognize the structure. In practice, one would choose the names based on their function. As well unit tests are not fully covering, just showing function of patterns. It is a cheat sheet focussing fast election of patterns - or not - to avoid over engineering. 
 
 ## Creational Patterns
 
