@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Chain {
-    private List<Handable> handlers = new ArrayList<>();
+    private final List<Handable> handlers = new ArrayList<>();
 
     public record Member(String name, int age) {}
 

@@ -10,7 +10,7 @@ public abstract class AbstractHandler {
 
     public static class MemberList extends ArrayList<Member> {}
 
-    public AbstractHandler(MemberList data) {
+    protected AbstractHandler(MemberList data) {
         this.data = data;
     }
 
