@@ -275,6 +275,34 @@ invoker.runCommand();
 
 ### Interpreter Pattern
 ### Iterator Pattern
+
+:pencil2: The Iterator Pattern simplifies traversing collections without exposing their structure. With a custom iterator, you can tailor traversal to specific needs. Java's built-in iterators streamline iteration over standard collections, ensuring consistency and interoperability. 
+
+#### Variant 1: Example using simply Java's built-in iterator
+
+:bulb: [Link to code example](src/main/java/com/abach42/designpatterns/behavioral/iterator/simple)
+
+:pill: [Link to test](src/test/java/com/abach42/designpatterns/unit/behavioral/iterator/simple/SimpleIteratorTest.java)
+
+#### Variant 2: Example using custom iterator
+
+:bulb: [Link to code example](src/main/java/com/abach42/designpatterns/behavioral/iterator/customiterator)
+
+:pill: [Link to test](src/test/java/com/abach42/designpatterns/unit/behavioral/iterator/customiterator/CustomIteratorTest.java)
+
+#### Client Code example
+
+```java
+List<Integer> numbers = new ArrayList<>(List.of(1, 2));
+ConcreteAggregate<Integer> aggregate = new ConcreteAggregate<>(numbers);
+Iterator<Integer> iterator = aggregate.createIterator();
+
+List<Integer> result = new ArrayList<>();
+while (iterator.hasNext()) {
+    result.add(iterator.next());
+}
+```
+
 ### Mediator Pattern
 ### Memento Pattern
 
