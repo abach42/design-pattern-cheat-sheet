@@ -208,7 +208,7 @@ firstHandler.handle();
 
 #### Variant 2: Example delegating handling tasks
 
-Here data context is passed on process and handler does not care about handling next, building chain, stering handle tasks from outside of handle method. 
+Here data context is passed on process and handler does not care about handling next, building chain, steering handle tasks from outside of handle method. 
 
 :bulb: [Link to code example](src/main/java/com/abach42/designpatterns/behavioral/chain/delegation/)
 
@@ -347,8 +347,8 @@ String actualFooBar = originator.getState();
 ```java
 
 ConcreteRoutingSubject subject = new ConcreteRoutingSubject();
-new CalculateDistanceObserver(subject);
-new CalculateDurationObserver(subject);
+AbstractObserver.createAndAttach(new CalculateDistanceObserver(subject));
+AbstractObserver.createAndAttach(new CalculateDurationObserver(subject));
         
 RouteEntity route = new RouteEntity("way home", new Point(0,0), new Point(20,20));
 //subject.detachObserver(/*some concrete observer*/);
