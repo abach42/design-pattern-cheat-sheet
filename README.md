@@ -245,6 +245,16 @@ This behavioral pattern separates tasks into small steps, enabling high reusabil
 
 :pill: [Link to test](src/test/java/com/abach42/designpatterns/unit/behavioral/command/ComandTest.java)
 
+```java
+Originator originator = new Originator("foo");
+
+Caretaker caretaker = new Caretaker();   
+originator.changeState("bar");
+caretaker.addMemento(originator.createSnapshot());
+originator.restoreSnapshot(caretaker.getMemento(0));
+String actualFooBar = originator.getState();
+```
+
 ##### Client Code example
 
 In this example receiver gets together with data storge object, this even can be separated. Obvious `Person` type is immutable but not used as record to provide multiple constructors. 
@@ -267,6 +277,13 @@ invoker.runCommand();
 ### Iterator Pattern
 ### Mediator Pattern
 ### Memento Pattern
+
+:pencil2: The Memento pattern enables the capture and externalization of an object's internal state, without violating encapsulation. It achieves this by allowing an object to create a memento object that stores its state, which can later be restored to the object. This pattern is particularly useful in scenarios where the state of an object needs to be saved and restored, such as in undo mechanisms or checkpoints in an application. 
+
+:bulb: [Link to code example](src/main/java/com/abach42/designpatterns/behavioral/memento/)
+
+:pill: [Link to test](src/test/java/com/abach42/designpatterns/unit/behavioral/memento/MementoTest.java)
+
 ### Observer Pattern
 
 :pencil2: The Observer Pattern is a design pattern where an object (the subject) maintains a list of its dependents (observers) and notifies them of any state changes. This allows for loose coupling between components, making it easier to maintain and extend the system. 
