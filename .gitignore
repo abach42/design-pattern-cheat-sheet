@@ -27,3 +27,4 @@ target/*
 !target/calculator*.jar
 
 *.vscode
+*.idea

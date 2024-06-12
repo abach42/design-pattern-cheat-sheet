@@ -417,6 +417,14 @@ calculator.setBehavior(new MultiplicationStrategy());
 calculator.calculate(2,6); // 12
 ```
 ### Template Method Pattern
+
+:pencil2: Gang of Four describes the purpose of the "Template Method" pattern as [follows:](https://archive.org/details/designpatternsel00gamm/page/324/mode/2up)
+"Define the skeleton of an algorithm in an operation, deferring some steps to subclasses. Template Method lets subclasses define certain steps of an algorithm without changing the algorithm's structure". 
+
+:bulb: [Link to code example](src/main/java/com/abach42/designpatterns/behavioral/template)
+
+:pill: [Link to test](src/test/java/com/abach42/designpatterns/unit/behavioral/template/TemplateMethodTest.java)
+
 ### Visitor Pattern
 
 :pencil2: Visitor pattern allows operations to be performed on elements of a structure without knowing the elements themselves. This is achieved by defining a separate "Visitor" class that provides specific operations for each element of the structure. The elements of the structure then implement an "accept" method, which allows the Visitor to perform the operations on the element.
