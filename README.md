@@ -45,6 +45,8 @@ While the Singleton pattern can be useful in certain situations, it's also often
 
 :pill: [Link to test](src/test/java/com/abach42/designpatterns/unit/creational/factorymethod/FactoryMethodTest.java)
 
+#### Client Code example
+
 ```java
 Creator creator = new CircleCreator();
 Product product = creator.createProduct(new Point(100, 100));
@@ -105,6 +107,8 @@ System.out.println(bareboneProduct.toString());
 
 :pill: [Link to test](src/test/java/com/abach42/designpatterns/unit/creational/prototype/PrototypeTest.java)
 
+#### Client Code example
+
 ```java
 CirclePrototype circlePrototype = new CirclePrototype();
 circlePrototype.x = 1;
@@ -128,6 +132,8 @@ The Adapter pattern consists of four main components:
 :bulb: [Link to code example](src/main/java/com/abach42/designpatterns/structural/adapter)
 
 :pill: [Link to test](src/test/java/com/abach42/designpatterns/unit/structural/adapter/AdapterTest.java)
+
+#### Client Code example
 
 ```java
 ApiAdaptee<String> fakeApiAdaptee = () -> "{\"id\": 42, \"name\": \"John Doe\"}";
@@ -245,19 +251,9 @@ This behavioral pattern separates tasks into small steps, enabling high reusabil
 
 :pill: [Link to test](src/test/java/com/abach42/designpatterns/unit/behavioral/command/ComandTest.java)
 
-```java
-Originator originator = new Originator("foo");
-
-Caretaker caretaker = new Caretaker();   
-originator.changeState("bar");
-caretaker.addMemento(originator.createSnapshot());
-originator.restoreSnapshot(caretaker.getMemento(0));
-String actualFooBar = originator.getState();
-```
-
-##### Client Code example
-
 In this example receiver gets together with data storage object, this even can be separated. Obvious `Person` type is immutable but not used as record to provide multiple constructors. 
+
+#### Client Code example
 
 ```java
 PersonInvoker invoker = new PersonInvoker();
@@ -280,6 +276,8 @@ invoker.runCommand();
 :bulb: [Link to code example](src/main/java/com/abach42/designpatterns/behavioral/interpreter)
 
 :pill: [Link to test](src/test/java/com/abach42/designpatterns/unit/behavioral/interpreter/InterpreterTest.java)
+
+#### Client Code example
 
 ```java       
 Context context = new Context('A');
@@ -326,6 +324,8 @@ When a 'colleague' sends a message through the mediator, the mediator distribute
 
 :pill: [Link to test](src/test/java/com/abach42/designpatterns/unit/behavioral/mediator/MediatorTest.java)
 
+#### Client Code example
+
 ```java       
 Mediator mediator = new Mediator();
 
@@ -349,6 +349,8 @@ germanColleague.getLastReceivedMessage(); // "Hallo Welt: ładna pogoda!"
 :bulb: [Link to code example](src/main/java/com/abach42/designpatterns/behavioral/memento/)
 
 :pill: [Link to test](src/test/java/com/abach42/designpatterns/unit/behavioral/memento/MementoTest.java)
+
+#### Client Code example
 
 ```java       
 Originator originator = new Originator("foo");
