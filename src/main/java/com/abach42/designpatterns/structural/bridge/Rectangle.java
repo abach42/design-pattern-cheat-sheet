@@ -2,6 +2,7 @@ package com.abach42.designpatterns.structural.bridge;
 
 import java.awt.geom.Point2D;
 
+// "Refined Abstraction"
 public class Rectangle extends Shape {
     private double width, height;
     private Point2D topLeft;

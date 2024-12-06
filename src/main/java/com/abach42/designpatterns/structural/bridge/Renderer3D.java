@@ -2,6 +2,11 @@ package com.abach42.designpatterns.structural.bridge;
 
 import java.awt.geom.Point2D;
 
+import com.abach42.designpatterns.structural.bridge.geom.Circle3DHelper;
+import com.abach42.designpatterns.structural.bridge.geom.Point3DHelper;
+import com.abach42.designpatterns.structural.bridge.geom.Rectangle3DHelper;
+
+// "Concrete Implementator"
 public class Renderer3D implements Renderer {
 
     @Override

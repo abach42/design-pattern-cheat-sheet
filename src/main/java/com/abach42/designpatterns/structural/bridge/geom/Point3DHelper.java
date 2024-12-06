@@ -1,5 +1,6 @@
-package com.abach42.designpatterns.structural.bridge;
+package com.abach42.designpatterns.structural.bridge.geom;
 
+//Helper does not belong to pattern
 public class Point3DHelper {
     public double x, y, z;
 

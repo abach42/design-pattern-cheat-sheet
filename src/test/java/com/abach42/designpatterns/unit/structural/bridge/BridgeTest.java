@@ -9,12 +9,12 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import com.abach42.designpatterns.structural.bridge.Circle;
-import com.abach42.designpatterns.structural.bridge.Circle3DHelper;
 import com.abach42.designpatterns.structural.bridge.Renderer2D;
 
 import com.abach42.designpatterns.structural.bridge.Renderer3D;
+import com.abach42.designpatterns.structural.bridge.geom.Circle3DHelper;
+import com.abach42.designpatterns.structural.bridge.geom.Rectangle3DHelper;
 import com.abach42.designpatterns.structural.bridge.Rectangle;
-import com.abach42.designpatterns.structural.bridge.Rectangle3DHelper;
 
 
 public class BridgeTest {

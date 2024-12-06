@@ -2,6 +2,7 @@ package com.abach42.designpatterns.structural.bridge;
 
 import java.awt.geom.Point2D;
 
+// "Refined Abstraction"
 public class Circle extends Shape {
     private double radius;
     private Point2D center;

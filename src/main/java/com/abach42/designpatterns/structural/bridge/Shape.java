@@ -1,5 +1,6 @@
 package com.abach42.designpatterns.structural.bridge;
 
+// "Abstraction"
 public abstract class Shape {
     //dependency Renderer makes the bridge
     protected Renderer renderer;
