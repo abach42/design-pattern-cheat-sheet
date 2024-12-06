@@ -175,9 +175,10 @@ Rectangle rectangle = new Rectangle(renderer3D, 10.0, 5.0, new Point2D.Double(0,
 Rectangle3DHelper result = (Rectangle3DHelper) rectangle.draw();
 ```
 
-
-
 ### Composite Pattern
+
+⌛
+
 ### Decorator Pattern
 
 :pencil2: The Decorator pattern is a structural design pattern that allows behavior to be added to individual objects, either statically or dynamically, without affecting the behavior of other objects from the same class.
@@ -201,8 +202,16 @@ System.out.println(String.format("%.2f", order.calculatePrice()));
 ```
 
 ### Facade Pattern
+
+⌛
+
 ### Flyweight Pattern
+
+⌛
+
 ### Proxy Pattern
+
+⌛
 
 ## Behavioral Patterns
 
@@ -432,6 +441,9 @@ Client code example, see above - interface did not change.
 :pill: [Link to test](src/test/java/com/abach42/designpatterns/unit/behavioral/observer/propertychange/ObserverPropertyChangeTest.java)
  
 ### State Pattern
+
+⌛
+
 ### Strategy Pattern
 
 :pencil2: The Strategy pattern is a behavioral design pattern that allows you to define a family of algorithms, encapsulate each one of them, and make them interchangeable. It enables a client to choose a particular algorithm from the family of algorithms at runtime without altering the client's code.
