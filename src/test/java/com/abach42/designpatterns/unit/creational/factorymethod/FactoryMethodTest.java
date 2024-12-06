@@ -17,6 +17,7 @@ import com.abach42.designpatterns.creational.factorymethod.Product;
 import com.abach42.designpatterns.creational.factorymethod.SquareCreator;
 
 public class FactoryMethodTest {
+    
     @Test
     @DisplayName("Should return circle")
     public void testShouldReturnCircle() {

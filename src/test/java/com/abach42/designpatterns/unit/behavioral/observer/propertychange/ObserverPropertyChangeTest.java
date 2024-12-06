@@ -14,6 +14,7 @@ import com.abach42.designpatterns.behavioral.observer.propertychange.ConcreteRou
 import com.abach42.designpatterns.behavioral.observer.propertychange.RouteEntity;
 
 public class ObserverPropertyChangeTest {
+    
     @Test
     @DisplayName("Observers listen and change routing information, distance and duration")
     public void testObserversListenAndChangeRoutingInformation() {

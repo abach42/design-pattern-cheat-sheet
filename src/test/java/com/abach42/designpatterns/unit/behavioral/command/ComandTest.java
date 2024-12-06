@@ -17,6 +17,7 @@ import com.abach42.designpatterns.behavioral.command.PersonSetReceiver;
 import com.abach42.designpatterns.behavioral.command.UpdatePersonCommand;
 
 public class ComandTest {
+    
     PersonInvoker invoker;
     PersonSetReceiver list;
 

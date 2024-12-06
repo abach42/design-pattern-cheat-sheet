@@ -14,6 +14,7 @@ import com.abach42.designpatterns.behavioral.observer.simple.ConcreteRoutingSubj
 import com.abach42.designpatterns.behavioral.observer.simple.RouteEntity;
 
 public class ObserverSimpleTest {
+    
     @Test
     @DisplayName("Observers listen and change routing information, distance and duration")
     public void testObserversListenAndChangeRoutingInformation() {

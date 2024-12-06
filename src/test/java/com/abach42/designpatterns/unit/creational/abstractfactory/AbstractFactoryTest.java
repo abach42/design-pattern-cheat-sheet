@@ -13,6 +13,7 @@ import com.abach42.designpatterns.creational.abstractfactory.ConcreteFactory1;
 import com.abach42.designpatterns.creational.abstractfactory.ConcreteFactory2;
 
 public class AbstractFactoryTest {
+    
     @ParameterizedTest(name = "{0}")
     @DisplayName("Should return the correct string")
     @MethodSource("abstractFactoryProvider")

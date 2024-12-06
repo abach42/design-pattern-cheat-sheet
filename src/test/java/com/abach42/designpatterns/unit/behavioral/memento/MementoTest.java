@@ -30,5 +30,4 @@ public class MementoTest {
         assertEquals("foo, bar", actualFooBar);
         assertEquals("foo, bar, baz", actualFooBarBaz);
     }
-
 }

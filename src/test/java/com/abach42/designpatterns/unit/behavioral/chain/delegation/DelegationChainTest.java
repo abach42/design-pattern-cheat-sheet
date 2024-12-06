@@ -12,6 +12,7 @@ import com.abach42.designpatterns.behavioral.chain.delegation.Handable;
 import com.abach42.designpatterns.behavioral.chain.delegation.SortByAgeHandler;
 
 public class DelegationChainTest {
+    
     @Test
     @DisplayName("chain not handles if emtpy")
     public void testChainNotHandlesIfEmpty() {

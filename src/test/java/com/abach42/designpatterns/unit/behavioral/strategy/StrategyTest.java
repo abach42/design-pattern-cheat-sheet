@@ -17,6 +17,7 @@ import com.abach42.designpatterns.behavioral.strategy.MultiplicationStrategy;
 import com.abach42.designpatterns.behavioral.strategy.SubtractionStrategy;
 
 public class StrategyTest {
+    
     @ParameterizedTest(name = "{0} = {3}")
     @DisplayName("Should calculate the correct result")
     @MethodSource("decoratorProvider")

@@ -11,6 +11,7 @@ import com.abach42.designpatterns.behavioral.chain.context.FilterHandler;
 import com.abach42.designpatterns.behavioral.chain.context.SortByAgeHandler;
 
 public class ContextChainTest {
+    
     @Test
     @DisplayName("chain not handles if emtpy")
     public void testChainNotHandlesIfEmpty() {

@@ -14,6 +14,7 @@ import com.abach42.designpatterns.structural.adapter.StreamAdapter;
 import com.abach42.designpatterns.structural.adapter.Target;
 
 public class AdapterTest {
+    
     @Test
     @DisplayName("Target of 'ApiAdapter' should result in expected 'Record'")
     public void testApiAdapter() {
