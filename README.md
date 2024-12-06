@@ -144,6 +144,39 @@ Record expeRecord = new Target.Record(42, "John Doe");
 In this example fakeApiAdaptee represents an external code or api without code insight. 
 
 ### Bridge Pattern
+
+:pencil2: The Bridge Pattern decouples an abstraction from its implementation so that the two can vary independently. Abstraction defines a high-level interface that uses an implementation object. Refined Abstraction extends the abstraction interface.
+Implementor defines the interface for implementation classes. Concrete Implementors provide the specific implementation of the Implementor interface.
+
+:bulb: [Link to code example](src/main/java/com/abach42/designpatterns/structural/bridge/)
+
+:pill: [Link to test](src/test/java/com/abach42/designpatterns/unit/structural/bridge/BridgeTest.java)
+
+#### Client Code example
+
+```java
+Renderer2D renderer2D = new Renderer2D();
+Circle circle = new Circle(renderer2D, 5.0, new Point2D.Double(10, 10));
+
+Ellipse2D result = (Ellipse2D) circle.draw();
+```
+
+```java
+Renderer3D renderer3D = new Renderer3D();
+Circle circle = new Circle(renderer3D, 5.0, new Point2D.Double(10, 10));
+
+Circle3DHelper result = (Circle3DHelper) circle.draw();
+```
+
+```java
+Renderer3D renderer3D = new Renderer3D();
+Rectangle rectangle = new Rectangle(renderer3D, 10.0, 5.0, new Point2D.Double(0, 0));
+
+Rectangle3DHelper result = (Rectangle3DHelper) rectangle.draw();
+```
+
+
+
 ### Composite Pattern
 ### Decorator Pattern
 
