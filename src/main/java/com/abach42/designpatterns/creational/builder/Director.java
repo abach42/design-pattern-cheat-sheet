@@ -1,6 +1,7 @@
 package com.abach42.designpatterns.creational.builder;
 
 public class Director {
+    
     public void constructBasicComputer(Builder builder) {
         builder.setCpu("Intel Core i3")
             .setRamSize(16)

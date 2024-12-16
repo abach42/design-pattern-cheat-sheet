@@ -4,7 +4,8 @@ import java.awt.geom.Point2D;
 
 // "Refined Abstraction"
 public class Rectangle extends Shape {
-    private double width, height;
+    private double width;
+    private double height;
     private Point2D topLeft;
 
     public Rectangle(Renderer renderer, double width, double height, Point2D topLeft) {

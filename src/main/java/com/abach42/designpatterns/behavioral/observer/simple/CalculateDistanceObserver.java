@@ -1,6 +1,7 @@
 package com.abach42.designpatterns.behavioral.observer.simple;
 
 public class CalculateDistanceObserver extends AbstractObserver {
+    
     public CalculateDistanceObserver(Subject subject) {
         super(subject);
     }

@@ -18,7 +18,6 @@ public class CustomIteratorTest {
     @Test
     @DisplayName("should iterate on custom iterator")
     void testIteratorPattern() {
-        
         List<Integer> numbers = new ArrayList<>();
         numbers.add(1);
         numbers.add(2);

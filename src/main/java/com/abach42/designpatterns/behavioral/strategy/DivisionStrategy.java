@@ -1,6 +1,6 @@
 package com.abach42.designpatterns.behavioral.strategy;
 
-public class DivisionStrategy implements Strategy{
+public class DivisionStrategy implements Strategy {
 
     @Override
     public int performOperation(int firstOperand, int secondOperand) {

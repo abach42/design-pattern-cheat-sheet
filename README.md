@@ -186,16 +186,16 @@ Rectangle3DHelper result = (Rectangle3DHelper) rectangle.draw();
 #### Client Code example
 
 ```java
-    File file1 = new File("file1.txt", 120);
-    File file2 = new File("file2.txt", 200);
+File file1 = new File("file1.txt", 120);
+File file2 = new File("file2.txt", 200);
 
-    Folder folder1 = new Folder("Folder1");
-    Folder folder2 = new Folder("Folder2");
+Folder folder1 = new Folder("Folder1");
+Folder folder2 = new Folder("Folder2");
 
-    folder1.addComponent(file1);
-    folder1.addComponent(file2);
+folder1.addComponent(file1);
+folder1.addComponent(file2);
 
-    folder2.addComponent(folder1);
+folder2.addComponent(folder1);
 ```
 
 ### Decorator Pattern

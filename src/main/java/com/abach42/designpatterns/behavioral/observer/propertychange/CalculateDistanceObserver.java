@@ -1,6 +1,7 @@
 package com.abach42.designpatterns.behavioral.observer.propertychange;
 
 public class CalculateDistanceObserver extends AbstractObserver {
+    
     public CalculateDistanceObserver(ConcreteRoutingSubject subject) {
         super(subject);
         

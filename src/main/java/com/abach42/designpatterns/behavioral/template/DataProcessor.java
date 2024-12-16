@@ -3,6 +3,7 @@ package com.abach42.designpatterns.behavioral.template;
 import java.util.List;
 
 public abstract class DataProcessor {
+    
     public void processData() {
         List<Data> dataList = fetchData();
         process(dataList);

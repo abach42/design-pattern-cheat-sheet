@@ -4,7 +4,6 @@ import java.awt.Point;
 
 public abstract class Prototype extends Point {
     // interface Cloneable for the type Prototype, already defined by Point2D, consider to use it otherwise
-
     public String color;
 
     public Prototype() {

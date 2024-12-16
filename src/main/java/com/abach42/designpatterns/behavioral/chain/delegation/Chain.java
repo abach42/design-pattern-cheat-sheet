@@ -5,9 +5,7 @@ import java.util.List;
 
 public class Chain {
     private final List<Handable> handlers = new ArrayList<>();
-
     public record Member(String name, int age) {}
-
     public static class MemberList extends ArrayList<Member> {}
 
     public Chain add(Handable handler) {
