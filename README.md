@@ -177,7 +177,26 @@ Rectangle3DHelper result = (Rectangle3DHelper) rectangle.draw();
 
 ### Composite Pattern
 
-⌛
+:pencil2: The Composite Pattern is a structural design pattern used to treat individual objects and compositions of objects uniformly. It is commonly used when you want to represent part-whole hierarchies. The pattern lets clients treat both individual objects (leaves) and compositions of objects (composites) uniformly.
+
+:bulb: [Link to code example](src/main/java/com/abach42/designpatterns/structural/composite/)
+
+:pill: [Link to test](src/test/java/com/abach42/designpatterns/unit/structural/composite/CompositeTest.java)
+
+#### Client Code example
+
+```java
+    File file1 = new File("file1.txt", 120);
+    File file2 = new File("file2.txt", 200);
+
+    Folder folder1 = new Folder("Folder1");
+    Folder folder2 = new Folder("Folder2");
+
+    folder1.addComponent(file1);
+    folder1.addComponent(file2);
+
+    folder2.addComponent(folder1);
+```
 
 ### Decorator Pattern
 

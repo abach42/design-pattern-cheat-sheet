@@ -16,7 +16,6 @@ import com.abach42.designpatterns.structural.bridge.geom.Circle3DHelper;
 import com.abach42.designpatterns.structural.bridge.geom.Rectangle3DHelper;
 import com.abach42.designpatterns.structural.bridge.Rectangle;
 
-
 public class BridgeTest {
 
     @Test
