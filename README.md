@@ -474,7 +474,13 @@ Client code example, see above - interface did not change.
  
 ### State Pattern
 
-⌛
+:pencil2: The State pattern is a behavioral design pattern that allows an object to change its behavior when its internal state changes. The object will appear to change its class. Instead of using conditional logic scattered across the code, states encapsulate behavior and transitions explicitly.
+
+In practice, each State encapsulates rules of transitions, and the Context delegates behavior to its current state.
+
+:bulb: [Link to code example](src/main/java/com/abach42/designpatterns/behavioral/state)
+
+:pill: [Link to test](src/test/java/com/abach42/designpatterns/unit/behavioral/state/StateTest.java)
 
 ### Strategy Pattern
 
