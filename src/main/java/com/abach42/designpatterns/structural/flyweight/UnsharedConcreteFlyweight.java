@@ -1,6 +1,7 @@
 package com.abach42.designpatterns.structural.flyweight;
 
 public class UnsharedConcreteFlyweight implements Flyweight {
+
     private final String allState;
 
     public UnsharedConcreteFlyweight(String allState) {

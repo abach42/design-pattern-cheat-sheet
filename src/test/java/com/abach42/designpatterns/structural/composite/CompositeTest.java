@@ -6,7 +6,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 public class CompositeTest {
-    
+
     @Test
     @DisplayName("File and Folderstructure as expected, both compatible")
     void testCompositePattern() {
@@ -28,12 +28,12 @@ public class CompositeTest {
 
         // Get the folder structure
         String expectedDetails = "Folder: Folder2\n" +
-                                 "  Folder: Folder1\n" +
-                                 "   File: file1.txt (Size: 120 KB)\n" +
-                                 "   File: file2.txt (Size: 200 KB)\n" +
-                                 "\n" + 
-                                 "   File: file3.txt (Size: 50 KB)\n"; //ident could be managed, 
-                                 // but simplicity of cheat cheet more important
+                "  Folder: Folder1\n" +
+                "   File: file1.txt (Size: 120 KB)\n" +
+                "   File: file2.txt (Size: 200 KB)\n" +
+                "\n" +
+                "   File: file3.txt (Size: 50 KB)\n"; //ident could be managed,
+        // but simplicity of cheat cheet more important
         assertEquals(expectedDetails, folder2.showDetails());
     }
 }

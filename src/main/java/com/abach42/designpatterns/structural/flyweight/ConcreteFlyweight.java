@@ -1,6 +1,7 @@
 package com.abach42.designpatterns.structural.flyweight;
 
 public class ConcreteFlyweight implements Flyweight {
+
     private final String intrinsicState;
 
     public ConcreteFlyweight(String intrinsicState) {

@@ -21,8 +21,10 @@ public class BridgeTest {
 
         assertEquals(5.0, result.getWidth() / 2, 0.01, "Circle radius (width) should match");
         assertEquals(5.0, result.getHeight() / 2, 0.01, "Circle radius (height) should match");
-        assertEquals(10 - 5, result.getX(), 0.01, "Top-left X coordinate should be adjusted for radius");
-        assertEquals(10 - 5, result.getY(), 0.01, "Top-left Y coordinate should be adjusted for radius");
+        assertEquals(10 - 5, result.getX(), 0.01,
+                "Top-left X coordinate should be adjusted for radius");
+        assertEquals(10 - 5, result.getY(), 0.01,
+                "Top-left Y coordinate should be adjusted for radius");
     }
 
     @Test

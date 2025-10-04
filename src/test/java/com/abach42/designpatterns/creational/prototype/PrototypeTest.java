@@ -7,7 +7,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 public class PrototypeTest {
-    
+
     @Test
     @DisplayName("Circles Should have different identity but same values")
     public void testCircleShouldBeNotSameButEqual() {
@@ -30,7 +30,7 @@ public class PrototypeTest {
         squarePrototype.y = 1;
         squarePrototype.side = 10;
         squarePrototype.color = "yellow";
-        
+
         SquarePrototype actualSquare = (SquarePrototype) squarePrototype.clone();
         assertNotSame(squarePrototype, actualSquare);
         assertEquals(squarePrototype, actualSquare);

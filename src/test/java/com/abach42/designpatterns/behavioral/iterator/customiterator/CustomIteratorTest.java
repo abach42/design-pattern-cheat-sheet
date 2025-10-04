@@ -43,7 +43,8 @@ public class CustomIteratorTest {
         Iterator<Integer> iterator = aggregate.createIterator();
 
         assertFalse(iterator.hasNext());
-        NoSuchElementException exception = assertThrows(NoSuchElementException.class, iterator::next);
+        NoSuchElementException exception = assertThrows(NoSuchElementException.class,
+                iterator::next);
         assertEquals("No more elements", exception.getMessage());
     }
 }

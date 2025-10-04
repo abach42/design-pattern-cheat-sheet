@@ -17,7 +17,8 @@ public class InterpreterTest {
 
         Character actualVowel = context.character();
         assertEquals("A is vowel", actualVowel + " is " + vowelInterpreter.interpret(context));
-        assertEquals("A is not a consonant", actualVowel + " is " + consonantInterpreter.interpret(context));
+        assertEquals("A is not a consonant",
+                actualVowel + " is " + consonantInterpreter.interpret(context));
     }
 
     @Test
@@ -29,7 +30,9 @@ public class InterpreterTest {
         Interpreter consonantInterpreter = new ConsonantInterpreter();
 
         Character actualConsonant = context.character();
-        assertEquals("B is not a vowel", actualConsonant + " is " + vowelInterpreter.interpret(context));
-        assertEquals("B is consonant", actualConsonant + " is " + consonantInterpreter.interpret(context));
+        assertEquals("B is not a vowel",
+                actualConsonant + " is " + vowelInterpreter.interpret(context));
+        assertEquals("B is consonant",
+                actualConsonant + " is " + consonantInterpreter.interpret(context));
     }
 }

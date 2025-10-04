@@ -7,7 +7,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 public class AdapterTest {
-    
+
     @Test
     @DisplayName("Target of 'ApiAdapter' should result in expected 'Record'")
     public void testApiAdapter() {

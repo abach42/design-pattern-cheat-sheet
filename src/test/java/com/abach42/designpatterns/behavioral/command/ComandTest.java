@@ -9,6 +9,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 public class ComandTest {
+
     PersonInvoker invoker;
     PersonSetReceiver list;
 
@@ -45,7 +46,7 @@ public class ComandTest {
     @Test
     @DisplayName("Should update a 'Person' element")
     public void testUpdateElement() {
-        invoker.setCommand(new CreatePersonCommand(list, new Person( "Saul", 62)));
+        invoker.setCommand(new CreatePersonCommand(list, new Person("Saul", 62)));
         invoker.setCommand(new UpdatePersonCommand(list, new Person(1L, "Paul", 34)));
         invoker.runCommand();
 
@@ -61,7 +62,7 @@ public class ComandTest {
         invoker.setCommand(new CreatePersonCommand(list, new Person("Peter", 62)));
         invoker.setCommand(new DeletePersonCommand(list, new Person(1L)));
         invoker.runCommand();
-    
+
         assertEquals(0, list.size());
     }
 

@@ -7,6 +7,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 public class VisitorTest {
+
     ObjectStructure zoo;
 
     @BeforeEach
@@ -15,7 +16,7 @@ public class VisitorTest {
         zoo.addAnimal(new LionElement());
         zoo.addAnimal(new ElephantElement());
     }
-    
+
     @Test
     @DisplayName("Should set isFedUp status to true on all animal element")
     public void testFeedAnimals() {
@@ -23,7 +24,7 @@ public class VisitorTest {
         zoo.visitAnimals(feedingVisitor);
 
         for (Element animal : zoo.getAnimals()) {
-           assertTrue(animal.isFedUp());
+            assertTrue(animal.isFedUp());
         }
     }
 
@@ -34,7 +35,7 @@ public class VisitorTest {
         zoo.visitAnimals(veterinarianVistitor);
 
         for (Element animal : zoo.getAnimals()) {
-           assertTrue(animal.isHealthChecked());
+            assertTrue(animal.isHealthChecked());
         }
     }
 }

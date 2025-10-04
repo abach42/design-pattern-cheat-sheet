@@ -9,32 +9,33 @@ import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
 public class AbstractFactoryTest {
-    
+
     @ParameterizedTest(name = "{0}")
     @DisplayName("Should return the correct string")
     @MethodSource("abstractFactoryProvider")
-    public void testAbstractFactoryReturnsProductString(String expectedResult, String actualResult) {   
+    public void testAbstractFactoryReturnsProductString(String expectedResult,
+            String actualResult) {
         assertEquals(expectedResult, actualResult);
     }
 
     private static Stream<Arguments> abstractFactoryProvider() {
         return Stream.of(
-            Arguments.of(
-                "Name:ProductA1",
-                new ConcreteFactory1().createProductA().toString()
-            ),
-            Arguments.of(
-                "Name:ProductA2",
-                new ConcreteFactory2().createProductA().toString()
-            ),
-            Arguments.of(
-                "Id:ProductB1",
-                new ConcreteFactory1().createProductB().toString()
-            ),
-            Arguments.of(
-                "Id:ProductB2",
-                new ConcreteFactory2().createProductB().toString()
-            )
+                Arguments.of(
+                        "Name:ProductA1",
+                        new ConcreteFactory1().createProductA().toString()
+                ),
+                Arguments.of(
+                        "Name:ProductA2",
+                        new ConcreteFactory2().createProductA().toString()
+                ),
+                Arguments.of(
+                        "Id:ProductB1",
+                        new ConcreteFactory1().createProductB().toString()
+                ),
+                Arguments.of(
+                        "Id:ProductB2",
+                        new ConcreteFactory2().createProductB().toString()
+                )
         );
     }
 }

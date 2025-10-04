@@ -6,7 +6,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-public class BuilderTest { 
+public class BuilderTest {
+
     private Director director;
 
     @BeforeEach
@@ -20,14 +21,14 @@ public class BuilderTest {
         BareboneConcreteBuilder bareboneBuilder = new BareboneConcreteBuilder();
         director.constructBasicComputer(bareboneBuilder);
         BareboneProduct bareboneProduct = bareboneBuilder.build();
-    
+
         String expectedProduct = "BareboneProduct[" +
-        "cpu=Intel Core i3" + 
-        ",ramSize=" + 16 +
-        ",hardDiskSize=" + 500 +
-        ",cooler=SMALL" +
-        "]";
-    
+                "cpu=Intel Core i3" +
+                ",ramSize=" + 16 +
+                ",hardDiskSize=" + 500 +
+                ",cooler=SMALL" +
+                "]";
+
         assertEquals(expectedProduct, bareboneProduct.toString());
     }
 
@@ -37,14 +38,14 @@ public class BuilderTest {
         BareboneConcreteBuilder bareboneBuilder = new BareboneConcreteBuilder();
         director.constructGamingComputer(bareboneBuilder);
         BareboneProduct bareboneProduct = bareboneBuilder.build();
-    
+
         String expectedProduct = "BareboneProduct[" +
-        "cpu=Intel Core i9" + 
-        ",ramSize=" + 64 +
-        ",hardDiskSize=" + 2000 +
-        ",cooler=SMALL" +
-        "]";
-    
+                "cpu=Intel Core i9" +
+                ",ramSize=" + 64 +
+                ",hardDiskSize=" + 2000 +
+                ",cooler=SMALL" +
+                "]";
+
         assertEquals(expectedProduct, bareboneProduct.toString());
     }
 
@@ -54,14 +55,14 @@ public class BuilderTest {
         TowerConcreteBuilder towerBuilder = new TowerConcreteBuilder();
         director.constructBasicComputer(towerBuilder);
         TowerProduct towerProduct = towerBuilder.build();
-    
+
         String expectedProduct = "TowerProduct[" +
-        "cpu=Intel Core i3" + 
-        ",ramSize=" + 16 +
-        ",hardDiskSize=" + 500 +
-        ",cooler=LARGE" +
-        "]";
-    
+                "cpu=Intel Core i3" +
+                ",ramSize=" + 16 +
+                ",hardDiskSize=" + 500 +
+                ",cooler=LARGE" +
+                "]";
+
         assertEquals(expectedProduct, towerProduct.toString());
     }
 
@@ -71,14 +72,14 @@ public class BuilderTest {
         TowerConcreteBuilder towerBuilder = new TowerConcreteBuilder();
         director.constructGamingComputer(towerBuilder);
         TowerProduct towerProduct = towerBuilder.build();
-    
+
         String expectedProduct = "TowerProduct[" +
-        "cpu=Intel Core i9" + 
-        ",ramSize=" + 64 +
-        ",hardDiskSize=" + 2000 +
-        ",cooler=LARGE" +
-        "]";
-    
+                "cpu=Intel Core i9" +
+                ",ramSize=" + 64 +
+                ",hardDiskSize=" + 2000 +
+                ",cooler=LARGE" +
+                "]";
+
         assertEquals(expectedProduct, towerProduct.toString());
     }
 }

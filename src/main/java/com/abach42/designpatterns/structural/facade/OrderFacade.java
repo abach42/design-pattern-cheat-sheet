@@ -1,6 +1,7 @@
 package com.abach42.designpatterns.structural.facade;
 
 public class OrderFacade {
+
     private final PaymentProcessor paymentProcessor;
     private final InventoryManager inventoryManager;
     private final ShippingService shippingService;
