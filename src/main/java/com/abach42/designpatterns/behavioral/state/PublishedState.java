@@ -4,7 +4,7 @@ public class PublishedState implements State {
 
     @Override
     public void publish(Document document) {
-        throw new IllegalStateException("Document is already published");
+        throw new IllegalStateException("Document already is published");
     }
 
     @Override

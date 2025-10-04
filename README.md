@@ -43,7 +43,7 @@ While the Singleton pattern can be useful in certain situations, it's also often
 
 :bulb: [Link to code example](src/main/java/com/abach42/designpatterns/creational/factorymethod)
 
-:pill: [Link to test](src/test/java/com/abach42/designpatterns/unit/creational/factorymethod/FactoryMethodTest.java)
+:pill: [Link to test](src/test/java/com/abach42/designpatterns/creational/factorymethod/FactoryMethodTest.java)
 
 #### Client Code example
 
@@ -64,7 +64,7 @@ Shape shape =  product.getShape();
 
 :bulb: [Link to code example](src/main/java/com/abach42/designpatterns/creational/abstractfactory)
 
-:pill: [Link to test](src/test/java/com/abach42/designpatterns/unit/creational/abstractfactory/AbstractFactoryTest.java)
+:pill: [Link to test](src/test/java/com/abach42/designpatterns/creational/abstractfactory/AbstractFactoryTest.java)
 
 #### Client Code example
 
@@ -81,11 +81,11 @@ String resultB = secondFactory.createProductB().toString(); //"Id:ProductB2"
 
 ### Builder Pattern
 
-:pencil2: The Builder pattern is a creational pattern that composes data in steps and divides the build process from the presentation layer. It allows you to produce different types and representations of an object using the same construction process. This pattern is particularly useful when dealing with objects that have numerous parameters or configurations, as it provides a clear way to separate the construction logic from the rest of the code. See variants in [test](src/test/java/com/abach42/designpatterns/unit/creational/builder/BuilderTest.java).
+:pencil2: The Builder pattern is a creational pattern that composes data in steps and divides the build process from the presentation layer. It allows you to produce different types and representations of an object using the same construction process. This pattern is particularly useful when dealing with objects that have numerous parameters or configurations, as it provides a clear way to separate the construction logic from the rest of the code. See variants in [test](src/test/java/com/abach42/designpatterns/creational/builder/BuilderTest.java).
 
 :bulb: [Link to code example](src/main/java/com/abach42/designpatterns/creational/builder)
 
-:pill: [Link to test](src/test/java/com/abach42/designpatterns/unit/creational/builder/BuilderTest.java)
+:pill: [Link to test](src/test/java/com/abach42/designpatterns/creational/builder/BuilderTest.java)
 
 #### Client Code example
 
@@ -105,7 +105,7 @@ System.out.println(bareboneProduct.toString());
 
 :bulb: [Link to code example](src/main/java/com/abach42/designpatterns/creational/prototype)
 
-:pill: [Link to test](src/test/java/com/abach42/designpatterns/unit/creational/prototype/PrototypeTest.java)
+:pill: [Link to test](src/test/java/com/abach42/designpatterns/creational/prototype/PrototypeTest.java)
 
 #### Client Code example
 
@@ -131,7 +131,7 @@ The Adapter pattern consists of four main components:
 
 :bulb: [Link to code example](src/main/java/com/abach42/designpatterns/structural/adapter)
 
-:pill: [Link to test](src/test/java/com/abach42/designpatterns/unit/structural/adapter/AdapterTest.java)
+:pill: [Link to test](src/test/java/com/abach42/designpatterns/structural/adapter/AdapterTest.java)
 
 #### Client Code example
 
@@ -150,7 +150,7 @@ Implementor defines the interface for implementation classes. Concrete Implement
 
 :bulb: [Link to code example](src/main/java/com/abach42/designpatterns/structural/bridge/)
 
-:pill: [Link to test](src/test/java/com/abach42/designpatterns/unit/structural/bridge/BridgeTest.java)
+:pill: [Link to test](src/test/java/com/abach42/designpatterns/structural/bridge/BridgeTest.java)
 
 #### Client Code example
 
@@ -181,7 +181,7 @@ Rectangle3DHelper result = (Rectangle3DHelper) rectangle.draw();
 
 :bulb: [Link to code example](src/main/java/com/abach42/designpatterns/structural/composite/)
 
-:pill: [Link to test](src/test/java/com/abach42/designpatterns/unit/structural/composite/CompositeTest.java)
+:pill: [Link to test](src/test/java/com/abach42/designpatterns/structural/composite/CompositeTest.java)
 
 #### Client Code example
 
@@ -206,7 +206,7 @@ The Decorator pattern allows you to stack decorators on top of each other, each 
 
 :bulb: [Link to code example](src/main/java/com/abach42/designpatterns/structural/decorator/)
 
-:pill: [Link to test](src/test/java/com/abach42/designpatterns/unit/structural/decorator/DecoratorTest.java)
+:pill: [Link to test](src/test/java/com/abach42/designpatterns/structural/decorator/DecoratorTest.java)
 
 #### Client Code example
 
@@ -234,7 +234,7 @@ System.out.println(String.format("%.2f", order.calculatePrice()));
 
 :bulb: [Link to code example](src/main/java/com/abach42/designpatterns/structural/proxy)
 
-:pill: [Link to test](src/test/java/com/abach42/designpatterns/unit/structural/proxy/ProxyTest.java)
+:pill: [Link to test](src/test/java/com/abach42/designpatterns/structural/proxy/ProxyTest.java)
 
 #### Client Code example
 
@@ -253,7 +253,7 @@ String result = proxy.getData();
 
 :bulb: [Link to code example](src/main/java/com/abach42/designpatterns/behavioral/chain/context/)
 
-:pill: [Link to test](src/test/java/com/abach42/designpatterns/unit/behavioral/chain/context/ContextChainTest.java)
+:pill: [Link to test](src/test/java/com/abach42/designpatterns/behavioral/chain/context/ContextChainTest.java)
 
 #### Client Code example
 
@@ -292,7 +292,7 @@ Here data context is passed on process and handler does not care about handling 
 
 :bulb: [Link to code example](src/main/java/com/abach42/designpatterns/behavioral/chain/delegation/)
 
-:pill: [Link to test](src/test/java/com/abach42/designpatterns/unit/behavioral/chain/delegation/DelegationChainTest.java)
+:pill: [Link to test](src/test/java/com/abach42/designpatterns/behavioral/chain/delegation/DelegationChainTest.java)
 
 ##### Client Code example
 
@@ -323,7 +323,7 @@ This behavioral pattern separates tasks into small steps, enabling high reusabil
 
 :bulb: [Link to code example](src/main/java/com/abach42/designpatterns/behavioral/command)
 
-:pill: [Link to test](src/test/java/com/abach42/designpatterns/unit/behavioral/command/ComandTest.java)
+:pill: [Link to test](src/test/java/com/abach42/designpatterns/behavioral/command/ComandTest.java)
 
 In this example receiver gets together with data storage object, this even can be separated. Obvious `Person` type is immutable but not used as record to provide multiple constructors. 
 
@@ -349,7 +349,7 @@ invoker.runCommand();
 
 :bulb: [Link to code example](src/main/java/com/abach42/designpatterns/behavioral/interpreter)
 
-:pill: [Link to test](src/test/java/com/abach42/designpatterns/unit/behavioral/interpreter/InterpreterTest.java)
+:pill: [Link to test](src/test/java/com/abach42/designpatterns/behavioral/interpreter/InterpreterTest.java)
 
 #### Client Code example
 
@@ -368,13 +368,13 @@ vowelInterpreter.interpret(context.character());
 
 :bulb: [Link to code example](src/main/java/com/abach42/designpatterns/behavioral/iterator/simple)
 
-:pill: [Link to test](src/test/java/com/abach42/designpatterns/unit/behavioral/iterator/simple/SimpleIteratorTest.java)
+:pill: [Link to test](src/test/java/com/abach42/designpatterns/behavioral/iterator/simple/SimpleIteratorTest.java)
 
 #### Variant 2: Example using custom iterator
 
 :bulb: [Link to code example](src/main/java/com/abach42/designpatterns/behavioral/iterator/customiterator)
 
-:pill: [Link to test](src/test/java/com/abach42/designpatterns/unit/behavioral/iterator/customiterator/CustomIteratorTest.java)
+:pill: [Link to test](src/test/java/com/abach42/designpatterns/behavioral/iterator/customiterator/CustomIteratorTest.java)
 
 #### Client Code example
 
@@ -396,7 +396,7 @@ When a 'colleague' sends a message through the mediator, the mediator distribute
  
 :bulb: [Link to code example](src/main/java/com/abach42/designpatterns/behavioral/mediator/)
 
-:pill: [Link to test](src/test/java/com/abach42/designpatterns/unit/behavioral/mediator/MediatorTest.java)
+:pill: [Link to test](src/test/java/com/abach42/designpatterns/behavioral/mediator/MediatorTest.java)
 
 #### Client Code example
 
@@ -422,7 +422,7 @@ germanColleague.getLastReceivedMessage(); // "Hallo Welt: ładna pogoda!"
 
 :bulb: [Link to code example](src/main/java/com/abach42/designpatterns/behavioral/memento/)
 
-:pill: [Link to test](src/test/java/com/abach42/designpatterns/unit/behavioral/memento/MementoTest.java)
+:pill: [Link to test](src/test/java/com/abach42/designpatterns/behavioral/memento/MementoTest.java)
 
 #### Client Code example
 
@@ -440,7 +440,7 @@ String actualFooBar = originator.getState();
 
 :bulb: [Link to code example](src/main/java/com/abach42/designpatterns/behavioral/observer/simple/)
 
-:pill: [Link to test](src/test/java/com/abach42/designpatterns/unit/behavioral/observer/simple/ObserverSimpleTest.java)
+:pill: [Link to test](src/test/java/com/abach42/designpatterns/behavioral/observer/simple/ObserverSimpleTest.java)
 
 #### Client Code example
 
@@ -470,7 +470,7 @@ Client code example, see above - interface did not change.
 
 :bulb: [Link to code example](src/main/java/com/abach42/designpatterns/behavioral/observer/propertychange/)
 
-:pill: [Link to test](src/test/java/com/abach42/designpatterns/unit/behavioral/observer/propertychange/ObserverPropertyChangeTest.java)
+:pill: [Link to test](src/test/java/com/abach42/designpatterns/behavioral/observer/propertychange/ObserverPropertyChangeTest.java)
  
 ### State Pattern
 
@@ -480,7 +480,7 @@ In practice, each State encapsulates rules of transitions, and the Context deleg
 
 :bulb: [Link to code example](src/main/java/com/abach42/designpatterns/behavioral/state)
 
-:pill: [Link to test](src/test/java/com/abach42/designpatterns/unit/behavioral/state/StateTest.java)
+:pill: [Link to test](src/test/java/com/abach42/designpatterns/behavioral/state/StateTest.java)
 
 ### Strategy Pattern
 
@@ -490,7 +490,7 @@ The key idea behind the Strategy pattern is to encapsulate algorithms into separ
 
 :bulb: [Link to code example](src/main/java/com/abach42/designpatterns/behavioral/strategy/)
 
-:pill: [Link to test](src/test/java/com/abach42/designpatterns/unit/behavioral/strategy/StrategyTest.java)
+:pill: [Link to test](src/test/java/com/abach42/designpatterns/behavioral/strategy/StrategyTest.java)
 
 #### Client Code example
 
@@ -508,7 +508,7 @@ calculator.calculate(2,6); // 12
 
 :bulb: [Link to code example](src/main/java/com/abach42/designpatterns/behavioral/template)
 
-:pill: [Link to test](src/test/java/com/abach42/designpatterns/unit/behavioral/template/TemplateMethodTest.java)
+:pill: [Link to test](src/test/java/com/abach42/designpatterns/behavioral/template/TemplateMethodTest.java)
 
 ### Visitor Pattern
 
@@ -518,7 +518,7 @@ The Visitor pattern is often used in scenarios where one wants to perform operat
 
 :bulb: [Link to code example](src/main/java/com/abach42/designpatterns/behavioral/visitor)
 
-:pill: [Link to test](src/test/java/com/abach42/designpatterns/unit/behavioral/visitor/VisitorTest.java)
+:pill: [Link to test](src/test/java/com/abach42/designpatterns/behavioral/visitor/VisitorTest.java)
 
 #### Client Code example
 
