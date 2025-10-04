@@ -222,8 +222,32 @@ System.out.println(String.format("%.2f", order.calculatePrice()));
 
 ### Facade Pattern
 
-⌛
+:pencil2: The Facade pattern provides a simplified interface to a set of complex subsystems. It allows clients to interact with a single unified interface without needing to understand the inner workings of each subsystem.
 
+:bulb: [Link to code example](src/main/java/com/abach42/designpatterns/structural/facade)
+
+:pill: [Link to test](src/test/java/com/abach42/designpatterns/structural/facade/FacadeTest.java)
+
+```java
+OrderFacade facade = new OrderFacade();
+String result = facade.placeOrder("Laptop", 2, 2000.0);
+```
+```java
+public class OrderFacade {
+    private final PaymentProcessor paymentProcessor;
+    private final InventoryManager inventoryManager;
+    private final ShippingService shippingService;
+    
+    // ... some constructor
+
+    public String placeOrder(String product, int quantity, double amount) {
+        // operations accessing fields of subsystems
+        
+        return // some value
+    }
+}
+```
+        
 ### Flyweight Pattern
 
 :pencil2: The Flyweight pattern is a structural design pattern that minimizes memory usage by sharing as much data as possible with similar objects. It separates **intrinsic state** (shared, immutable data) from **extrinsic state** (context-dependent, provided from outside).
@@ -232,10 +256,10 @@ The pattern is useful when a system needs to handle a large number of fine-grain
 
 Components:
 
-        * **Flyweight**: declares interface for objects that can act as shared.
-        * **ConcreteFlyweight**: implements the Flyweight and stores intrinsic state.
-        * **UnsharedConcreteFlyweight**: objects that cannot be shared but may use Flyweights internally.
-        * **FlyweightFactory**: creates and manages Flyweight objects, ensuring they are reused.
+* **Flyweight**: declares interface for objects that can act as shared.
+* **ConcreteFlyweight**: implements the Flyweight and stores intrinsic state.
+* **UnsharedConcreteFlyweight**: objects that cannot be shared but may use Flyweights internally.
+* **FlyweightFactory**: creates and manages Flyweight objects, ensuring they are reused.
 
 :bulb: [Link to code example](src/main/java/com/abach42/designpatterns/structural/flyweight)
 
