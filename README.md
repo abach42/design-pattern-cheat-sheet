@@ -230,7 +230,20 @@ System.out.println(String.format("%.2f", order.calculatePrice()));
 
 ### Proxy Pattern
 
-⌛
+:pencil2: The Proxy pattern is a structural design pattern that provides a surrogate or placeholder for another object to control access to it. This can be useful for lazy initialization, access control, logging, or caching. The Proxy implements the same interface as the RealSubject and delegates calls to it, while possibly adding extra behavior.
+
+:bulb: [Link to code example](src/main/java/com/abach42/designpatterns/structural/proxy)
+
+:pill: [Link to test](src/test/java/com/abach42/designpatterns/unit/structural/proxy/ProxyTest.java)
+
+#### Client Code example
+
+```java
+RealSubject real = new RealSubject();
+Proxy proxy = new Proxy(real);
+
+String result = proxy.getData();
+```
 
 ## Behavioral Patterns
 
