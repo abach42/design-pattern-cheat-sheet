@@ -226,7 +226,42 @@ System.out.println(String.format("%.2f", order.calculatePrice()));
 
 ### Flyweight Pattern
 
-⌛
+:pencil2: The Flyweight pattern is a structural design pattern that minimizes memory usage by sharing as much data as possible with similar objects. It separates **intrinsic state** (shared, immutable data) from **extrinsic state** (context-dependent, provided from outside).
+
+The pattern is useful when a system needs to handle a large number of fine-grained objects efficiently, such as characters in a text editor, tiles in a game, or icons in a UI.
+
+Components:
+
+        * **Flyweight**: declares interface for objects that can act as shared.
+        * **ConcreteFlyweight**: implements the Flyweight and stores intrinsic state.
+        * **UnsharedConcreteFlyweight**: objects that cannot be shared but may use Flyweights internally.
+        * **FlyweightFactory**: creates and manages Flyweight objects, ensuring they are reused.
+
+:bulb: [Link to code example](src/main/java/com/abach42/designpatterns/structural/flyweight)
+
+:pill: [Link to test](src/test/java/com/abach42/designpatterns/structural/flyweight/FlyweightTest.java)
+
+```java
+FlyweightFactory factory = new FlyweightFactory();
+
+Flyweight sharedA1 = factory.getFlyweight("A");
+Flyweight sharedA2 = factory.getFlyweight("A");
+Flyweight sharedB = factory.getFlyweight("B");
+
+String first = sharedA1.operation("first");
+// "Intrinsic: A, Extrinsic: first"
+String second = sharedA2.operation("second");
+// "Intrinsic: A, Extrinsic: second"
+String context = sharedB.operation("context");
+// "Intrinsic: B, Extrinsic: context"
+```
+
+To keep interface: 
+```java
+Flyweight unshared = new UnsharedConcreteFlyweight("CustomState");
+String result = unshared.operation("external context");
+// "Unshared: CustomState, Extrinsic: external context"
+```
 
 ### Proxy Pattern
 
