@@ -4,6 +4,7 @@ import java.awt.Point;
 import java.util.Objects;
 
 public class RouteEntity {
+
     private String name;
     private Point location;
     private Point destination;
@@ -48,7 +49,7 @@ public class RouteEntity {
         this.distance = distance;
     }
 
-        public float getDuration() {
+    public float getDuration() {
         return duration;
     }
 
@@ -58,8 +59,12 @@ public class RouteEntity {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         RouteEntity that = (RouteEntity) o;
         return Double.compare(that.distance, distance) == 0 &&
                 Float.compare(that.duration, duration) == 0 &&

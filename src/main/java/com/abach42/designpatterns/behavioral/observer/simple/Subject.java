@@ -1,9 +1,14 @@
 package com.abach42.designpatterns.behavioral.observer.simple;
 
 public interface Subject {
-    public void attachObserver(AbstractObserver observer);
-    public void detachObserver(AbstractObserver observer);
-    public void notifyObservers();
-    public void setStateEntity(RouteEntity entity);
-    public RouteEntity getStateEntity();
+
+    void attachObserver(AbstractObserver observer);
+
+    void detachObserver(AbstractObserver observer);
+
+    void notifyObservers();
+
+    void setStateEntity(RouteEntity entity);
+
+    RouteEntity getStateEntity();
 }

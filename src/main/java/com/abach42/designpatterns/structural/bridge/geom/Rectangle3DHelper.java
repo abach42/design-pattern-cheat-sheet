@@ -2,6 +2,7 @@ package com.abach42.designpatterns.structural.bridge.geom;
 
 //Helper does not belong to pattern
 public class Rectangle3DHelper {
+
     public Point3DHelper topLeft;
     public double width;
     public double height;

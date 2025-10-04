@@ -4,6 +4,7 @@ import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
 
 public class ConcreteRoutingSubject implements Subject {
+
     private RouteEntity routeEntity;
     private final PropertyChangeSupport propertyChangeSupport;
 

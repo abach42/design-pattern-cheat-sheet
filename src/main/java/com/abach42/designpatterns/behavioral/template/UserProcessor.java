@@ -3,7 +3,7 @@ package com.abach42.designpatterns.behavioral.template;
 import java.util.List;
 
 public class UserProcessor extends DataProcessor {
-    
+
     @Override
     protected List<Data> fetchData() {
         // Code to fetch user data from the database

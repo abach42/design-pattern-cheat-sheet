@@ -1,6 +1,7 @@
 package com.abach42.designpatterns.behavioral.template;
 
 public class ProductData extends Data {
+
     private final String name;
     private final double price;
 

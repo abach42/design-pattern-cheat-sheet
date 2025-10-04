@@ -1,6 +1,7 @@
 package com.abach42.designpatterns.creational.builder;
 
 public class BareboneProduct {
+
     private final String cpu;
     private final int ramSize;
     private final int hardDiskSize;
@@ -16,7 +17,7 @@ public class BareboneProduct {
     @Override
     public String toString() {
         return "BareboneProduct[" +
-                "cpu=" + cpu + 
+                "cpu=" + cpu +
                 ",ramSize=" + ramSize +
                 ",hardDiskSize=" + hardDiskSize +
                 ",cooler=" + cooler +

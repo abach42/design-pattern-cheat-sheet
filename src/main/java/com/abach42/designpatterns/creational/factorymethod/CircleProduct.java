@@ -5,8 +5,9 @@ import java.awt.Shape;
 import java.awt.geom.Ellipse2D;
 
 public class CircleProduct implements Product {
-    private Point center;
-    private int radius;
+
+    private final Point center;
+    private final int radius;
 
     public CircleProduct(Point center, int radius) {
         super();

@@ -1,6 +1,7 @@
 package com.abach42.designpatterns.behavioral.mediator;
 
 public abstract class Colleague {
+
     protected Mediator mediator;
     protected String lastReceivedMessage;
 

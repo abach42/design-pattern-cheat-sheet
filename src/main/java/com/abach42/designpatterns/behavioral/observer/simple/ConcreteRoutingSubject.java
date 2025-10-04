@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ConcreteRoutingSubject implements Subject {
-    private List<AbstractObserver> observers = new ArrayList<>();
+
+    private final List<AbstractObserver> observers = new ArrayList<>();
     private RouteEntity entity;
     private int entityHashCode = 0;
 
@@ -26,8 +27,8 @@ public class ConcreteRoutingSubject implements Subject {
     public void setStateEntity(RouteEntity entity) {
         this.entity = entity;
 
-        if(entityHashCode != entity.hashCode()) {
-            notifyObservers(); 
+        if (entityHashCode != entity.hashCode()) {
+            notifyObservers();
             entityHashCode = entity.hashCode();
         }
     }

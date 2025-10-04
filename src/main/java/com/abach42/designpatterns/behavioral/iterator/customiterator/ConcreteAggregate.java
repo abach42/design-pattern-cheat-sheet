@@ -3,15 +3,16 @@ package com.abach42.designpatterns.behavioral.iterator.customiterator;
 import java.util.Iterator;
 import java.util.List;
 
-public class ConcreteAggregate<T> implements Aggregate<T>{
-  private final List<T> items;
+public class ConcreteAggregate<T> implements Aggregate<T> {
 
-  public ConcreteAggregate(List<T> items) {
-    this.items = items;
-  }
+    private final List<T> items;
 
-  @Override
-  public Iterator<T> createIterator() {
-    return new ConcreteIterator<>(items);
-  }
+    public ConcreteAggregate(List<T> items) {
+        this.items = items;
+    }
+
+    @Override
+    public Iterator<T> createIterator() {
+        return new ConcreteIterator<>(items);
+    }
 }

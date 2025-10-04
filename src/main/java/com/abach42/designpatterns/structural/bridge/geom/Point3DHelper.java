@@ -2,6 +2,7 @@ package com.abach42.designpatterns.structural.bridge.geom;
 
 //Helper does not belong to pattern
 public class Point3DHelper {
+
     public double x, y, z;
 
     public Point3DHelper(double x, double y, double z) {

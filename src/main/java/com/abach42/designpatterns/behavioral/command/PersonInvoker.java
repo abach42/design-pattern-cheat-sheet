@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PersonInvoker {
-    private List<Command> commands = new ArrayList<>();
+
+    private final List<Command> commands = new ArrayList<>();
 
     public void setCommand(Command command) {
         this.commands.add(command);

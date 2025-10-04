@@ -1,8 +1,9 @@
 package com.abach42.designpatterns.behavioral.memento;
 
 public class Originator {
+
     private String state;
-    
+
     public Originator(String state) {
         this.state = state;
     }

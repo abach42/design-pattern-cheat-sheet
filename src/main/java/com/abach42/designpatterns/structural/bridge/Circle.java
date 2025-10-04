@@ -4,8 +4,9 @@ import java.awt.geom.Point2D;
 
 // "Refined Abstraction"
 public class Circle extends Shape {
-    private double radius;
-    private Point2D center;
+
+    private final double radius;
+    private final Point2D center;
 
     public Circle(Renderer renderer, double radius, Point2D center) {
         super(renderer);

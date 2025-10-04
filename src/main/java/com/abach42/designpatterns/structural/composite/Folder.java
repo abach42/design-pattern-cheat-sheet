@@ -5,8 +5,9 @@ import java.util.List;
 
 // Composite Class
 public class Folder implements FileSystemComponent {
-    private String name;
-    private List<FileSystemComponent> components = new ArrayList<>();
+
+    private final String name;
+    private final List<FileSystemComponent> components = new ArrayList<>();
 
     public Folder(String name) {
         this.name = name;

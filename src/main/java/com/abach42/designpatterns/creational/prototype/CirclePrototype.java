@@ -1,6 +1,7 @@
 package com.abach42.designpatterns.creational.prototype;
 
 public class CirclePrototype extends Prototype {
+
     public int radius;
 
     public CirclePrototype() {
@@ -18,8 +19,8 @@ public class CirclePrototype extends Prototype {
 
     @Override
     public boolean equals(Object comparison) {
-        if(false == comparison instanceof CirclePrototype
-            || false == super.equals(comparison)
+        if (!(comparison instanceof CirclePrototype)
+                || !super.equals(comparison)
         ) {
             return false;
         }

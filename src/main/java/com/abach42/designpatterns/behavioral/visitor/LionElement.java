@@ -1,6 +1,7 @@
 package com.abach42.designpatterns.behavioral.visitor;
 
 public class LionElement implements Element {
+
     private boolean isLionFed = false;
     private boolean isLionTheethHealthy = false;
 

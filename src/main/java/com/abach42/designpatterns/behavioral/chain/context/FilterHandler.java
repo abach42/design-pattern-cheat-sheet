@@ -3,6 +3,7 @@ package com.abach42.designpatterns.behavioral.chain.context;
 import java.util.function.Predicate;
 
 public class FilterHandler extends AbstractHandler {
+
     private int minAge = 40;
 
     public FilterHandler(MemberList data, int minAge) {

@@ -1,7 +1,8 @@
 package com.abach42.designpatterns.behavioral.observer.simple;
 
 public class CalculateDurationObserver extends AbstractObserver {
-    private static final int SPEED = 5; 
+
+    private static final int SPEED = 5;
 
     public CalculateDurationObserver(Subject subject) {
         super(subject);
@@ -9,10 +10,10 @@ public class CalculateDurationObserver extends AbstractObserver {
 
     @Override
     public void update() {
-       RouteEntity entity = this.subject.getStateEntity();
-       float duration = calculateDuration(entity);
+        RouteEntity entity = this.subject.getStateEntity();
+        float duration = calculateDuration(entity);
 
-       entity.setDuration(duration);
+        entity.setDuration(duration);
     }
 
     private float calculateDuration(RouteEntity entity) {

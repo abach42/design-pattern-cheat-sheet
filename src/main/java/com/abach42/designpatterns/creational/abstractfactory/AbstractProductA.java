@@ -1,6 +1,7 @@
 package com.abach42.designpatterns.creational.abstractfactory;
 
 public abstract class AbstractProductA {
+
     protected String name;
 
     public String getName() {

@@ -1,8 +1,9 @@
 package com.abach42.designpatterns.behavioral.command;
 
 public class DeletePersonCommand implements Command {
-    private PersonSetReceiver receiver;
-    private Person person;
+
+    private final PersonSetReceiver receiver;
+    private final Person person;
 
     public DeletePersonCommand(PersonSetReceiver receiver, Person person) {
         this.receiver = receiver;

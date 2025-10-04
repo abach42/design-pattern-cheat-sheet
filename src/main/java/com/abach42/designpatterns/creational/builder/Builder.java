@@ -1,7 +1,8 @@
 package com.abach42.designpatterns.creational.builder;
 
 public abstract class Builder {
-    protected static enum CoolerType {
+
+    protected enum CoolerType {
         SMALL, LARGE
     }
 

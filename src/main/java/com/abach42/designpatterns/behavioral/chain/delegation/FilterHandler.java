@@ -3,6 +3,7 @@ package com.abach42.designpatterns.behavioral.chain.delegation;
 import java.util.function.Predicate;
 
 public class FilterHandler implements Handable {
+
     private int minAge = 40;
 
     public FilterHandler(int minAge) {
@@ -14,7 +15,7 @@ public class FilterHandler implements Handable {
         if (memberList.isEmpty()) {
             return memberList;
         }
-        
+
         Predicate<Chain.Member> filteredMember = member -> member.age() < minAge;
         memberList.removeIf(filteredMember);
 

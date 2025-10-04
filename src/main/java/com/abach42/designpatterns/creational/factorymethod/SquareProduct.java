@@ -5,8 +5,9 @@ import java.awt.Rectangle;
 import java.awt.Shape;
 
 public class SquareProduct implements Product {
-    private Point topLeft;
-    private int side;
+
+    private final Point topLeft;
+    private final int side;
 
     public SquareProduct(Point topLeft, int side) {
         super();

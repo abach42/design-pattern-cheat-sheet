@@ -1,6 +1,7 @@
 package com.abach42.designpatterns.behavioral.visitor;
 
 public class ElephantElement implements Element {
+
     private boolean isElephantFed = false;
     private boolean isElephantWeightOk = false;
 

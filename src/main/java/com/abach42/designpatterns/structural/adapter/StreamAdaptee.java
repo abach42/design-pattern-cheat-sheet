@@ -2,5 +2,6 @@ package com.abach42.designpatterns.structural.adapter;
 
 @FunctionalInterface
 public interface StreamAdaptee<T> {
+
     T fetchDataFromStream();
 }

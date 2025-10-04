@@ -1,6 +1,7 @@
 package com.abach42.designpatterns.creational.prototype;
 
 public class SquarePrototype extends Prototype {
+
     public int side;
 
     public SquarePrototype() {
@@ -18,12 +19,12 @@ public class SquarePrototype extends Prototype {
 
     @Override
     public boolean equals(Object comparison) {
-        if( false == comparison instanceof SquarePrototype
-            || false == super.equals(comparison)
+        if (!(comparison instanceof SquarePrototype)
+                || !super.equals(comparison)
         ) {
             return false;
         }
-        
+
         SquarePrototype prototype = (SquarePrototype) comparison;
         return prototype.side == this.side;
     }

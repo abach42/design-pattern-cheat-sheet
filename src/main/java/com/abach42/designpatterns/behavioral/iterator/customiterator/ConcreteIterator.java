@@ -4,7 +4,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.NoSuchElementException;
 
-public class ConcreteIterator<T> implements Iterator<T>{
+public class ConcreteIterator<T> implements Iterator<T> {
+
     private final List<T> items;
     private int position;
 

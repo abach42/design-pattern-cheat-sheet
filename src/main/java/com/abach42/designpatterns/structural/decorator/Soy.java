@@ -2,7 +2,7 @@ package com.abach42.designpatterns.structural.decorator;
 
 import java.math.BigDecimal;
 
-public class Soy extends Decorator{
+public class Soy extends Decorator {
 
     public Soy(Component component) {
         super(component);

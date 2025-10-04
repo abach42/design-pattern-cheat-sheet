@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Mediator {
+
     private final List<Colleague> colleagues;
 
     public Mediator() {
@@ -13,7 +14,7 @@ public class Mediator {
     public void addColleague(Colleague colleague) {
         this.colleagues.add(colleague);
     }
-    
+
     public void sendMessage(String message, Colleague colleague) {
         for (Colleague col : colleagues) {
             if (col != colleague) {

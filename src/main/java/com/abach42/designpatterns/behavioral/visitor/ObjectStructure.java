@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ObjectStructure {
-    private List<Element> animals = new ArrayList<>();
+
+    private final List<Element> animals = new ArrayList<>();
 
     public void addAnimal(Element element) {
         animals.add(element);
