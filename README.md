@@ -554,7 +554,7 @@ String secondState = document.getStateName();
 
 document.archive();
 String thirdState = document.getStateName();
-// "ArchivedW
+// "Archived"
 ```
 
 ### Strategy Pattern
