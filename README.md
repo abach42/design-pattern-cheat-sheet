@@ -541,6 +541,22 @@ In practice, each State encapsulates rules of transitions, and the Context deleg
 
 :pill: [Link to test](src/test/java/com/abach42/designpatterns/behavioral/state/StateTest.java)
 
+#### Client Code example
+
+```java
+Document document = new Document();
+String firstState = document.getStateName();
+// "Draft"
+
+document.publish();
+String secondState = document.getStateName();
+// "Published"
+
+document.archive();
+String thirdState = document.getStateName();
+// "ArchivedW
+```
+
 ### Strategy Pattern
 
 :pencil2: The Strategy pattern is a behavioral design pattern that allows you to define a family of algorithms, encapsulate each one of them, and make them interchangeable. It enables a client to choose a particular algorithm from the family of algorithms at runtime without altering the client's code.
@@ -563,11 +579,22 @@ calculator.calculate(2,6); // 12
 ### Template Method Pattern
 
 :pencil2: Gang of Four describes the purpose of the "Template Method" pattern as [follows:](https://archive.org/details/designpatternsel00gamm/page/324/mode/2up)
-"Define the skeleton of an algorithm in an operation, deferring some steps to subclasses. Template Method lets subclasses define certain steps of an algorithm without changing the algorithm's structure". 
+"Define the skeleton of an algorithm in an operation, deferring some steps to subclasses. Template Method lets subclasses define certain steps of an algorithm without changing the algorithm's structure".
+It’s a way to outline the steps of a process while letting subclasses fill in the details. Think of it as a recipe: the main steps are fixed, but you can choose the ingredients for some parts.
 
 :bulb: [Link to code example](src/main/java/com/abach42/designpatterns/behavioral/template)
 
 :pill: [Link to test](src/test/java/com/abach42/designpatterns/behavioral/template/TemplateMethodTest.java)
+
+#### Client Code example
+
+```java
+UserProcessor userProcessor = new UserProcessor();
+List<Data> dataList = userProcessor.fetchData();
+
+ProductProcessor productProcessor = new ProductProcessor();
+List<Data> dataList = productProcessor.fetchData();
+```
 
 ### Visitor Pattern
 

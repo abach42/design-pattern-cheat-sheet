@@ -9,27 +9,27 @@ public class StateTest {
 
     @Test
     void testValidTransitions() {
-        Document doc = new Document();
-        assertEquals("Draft", doc.getStateName());
+        Document document = new Document();
+        assertEquals("Draft", document.getStateName());
 
-        doc.publish();
-        assertEquals("Published", doc.getStateName());
+        document.publish();
+        assertEquals("Published", document.getStateName());
 
-        doc.archive();
-        assertEquals("Archived", doc.getStateName());
+        document.archive();
+        assertEquals("Archived", document.getStateName());
     }
 
     @Test
     void testInvalidTransitions() {
-        Document doc = new Document();
+        Document document = new Document();
 
-        assertThrows(IllegalStateException.class, doc::archive);
-        doc.publish();
+        assertThrows(IllegalStateException.class, document::archive);
+        document.publish();
 
-        assertThrows(IllegalStateException.class, doc::publish);
-        doc.archive();
+        assertThrows(IllegalStateException.class, document::publish);
+        document.archive();
 
-        assertThrows(IllegalStateException.class, doc::publish);
-        assertThrows(IllegalStateException.class, doc::archive);
+        assertThrows(IllegalStateException.class, document::publish);
+        assertThrows(IllegalStateException.class, document::archive);
     }
 }

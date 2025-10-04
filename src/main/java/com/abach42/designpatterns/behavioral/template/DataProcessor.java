@@ -4,6 +4,7 @@ import java.util.List;
 
 public abstract class DataProcessor {
 
+    // to simplify usage, you could collect your "actions"
     public void processData() {
         List<Data> dataList = fetchData();
         process(dataList);
