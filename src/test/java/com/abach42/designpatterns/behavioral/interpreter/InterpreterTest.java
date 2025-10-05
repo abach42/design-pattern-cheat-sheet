@@ -1,38 +1,35 @@
 package com.abach42.designpatterns.behavioral.interpreter;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import org.junit.jupiter.api.DisplayName;
+import java.util.Map;
 import org.junit.jupiter.api.Test;
 
 public class InterpreterTest {
 
     @Test
-    @DisplayName("should interpret a context as vowel")
-    void testInterpreterVovel() {
-        Context context = new Context('A');
+    void testExpressionTreeWithNot() {
+        Context context = new Context(Map.of("a", true, "b", false, "c", true));
 
-        Interpreter vowelInterpreter = new VowelInterpreter();
-        Interpreter consonantInterpreter = new ConsonantInterpreter();
+        Expression expression = new AndExpression(
+                new VariableExpression("a"),
+                new NotExpression(
+                        new OrExpression(
+                                new VariableExpression("b"),
+                                new VariableExpression("c")
+                        )
+                )
+        );
 
-        Character actualVowel = context.character();
-        assertEquals("A is vowel", actualVowel + " is " + vowelInterpreter.interpret(context));
-        assertEquals("A is not a consonant",
-                actualVowel + " is " + consonantInterpreter.interpret(context));
+        assertFalse(expression.interpret(context));
     }
 
     @Test
-    @DisplayName("should interpret a context as consonant")
-    void testInterpreterConsonant() {
-        Context context = new Context('B');
+    void testOnlyNotExpression() {
+        Context context = new Context(Map.of("a", false));
 
-        Interpreter vowelInterpreter = new VowelInterpreter();
-        Interpreter consonantInterpreter = new ConsonantInterpreter();
-
-        Character actualConsonant = context.character();
-        assertEquals("B is not a vowel",
-                actualConsonant + " is " + vowelInterpreter.interpret(context));
-        assertEquals("B is consonant",
-                actualConsonant + " is " + consonantInterpreter.interpret(context));
+        Expression expression = new NotExpression(new VariableExpression("a"));
+        assertTrue(expression.interpret(context));
     }
 }

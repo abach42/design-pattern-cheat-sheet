@@ -404,7 +404,17 @@ invoker.runCommand();
 
 ### Interpreter Pattern
 
-:pencil2: The Interpreter Pattern defines a representation for a status and provides an interpreter to process it into another form. This pattern is useful for designing a syntax tree structure that can interpret sentences, commands, or expressions, allowing for language processing within the software. By encapsulating language-specific grammar and interpretation logic, the Interpreter Pattern simplifies the implementation of complex parsing and evaluation tasks, making it easier to maintain and extend language features.
+
+:pencil2: The **Interpreter Pattern** defines a grammar and provides an interpreter that evaluates sentences of that grammar.
+Each rule or symbol of the grammar corresponds to a class implementing a common interface.
+
+This pattern is suitable for small domain-specific languages, rule engines, and formula evaluators.
+
+* `Expression` – defines the `interpret(Context)` interface.
+* `VariableExpression` – represents variables (terminal symbols).
+* `NonTerminalExpression` – represents grammar rules combining other expressions (`AND`, `OR`, `NOT`, etc.).
+* `Context` – provides variable values.
+* `Client` – builds and interprets expression trees.
 
 :bulb: [Link to code example](src/main/java/com/abach42/designpatterns/behavioral/interpreter)
 
@@ -412,11 +422,25 @@ invoker.runCommand();
 
 #### Client Code example
 
-```java       
-Context context = new Context('A');
-Interpreter vowelInterpreter = new VowelInterpreter();
+```java
+Context context = new Context(Map.of(
+        "a", true,
+        "b", false,
+        "c", true
+));
 
-vowelInterpreter.interpret(context.character());
+// Expression: a AND NOT (b OR c)
+Expression expr = new AndExpression(
+        new VariableExpression("a"),
+        new NotExpression(
+                new OrExpression(
+                        new VariableExpression("b"),
+                        new VariableExpression("c")
+                )
+        )
+);
+
+boolean result = expr.interpret(context); // false
 ```
 
 ### Iterator Pattern
