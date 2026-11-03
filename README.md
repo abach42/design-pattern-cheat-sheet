@@ -1,5 +1,10 @@
 # Java Design Patterns Cheat Sheet – Gang of Four (GoF) Examples
 
+[![CI](https://github.com/abach42/design-pattern-cheat-sheet/actions/workflows/ci.yml/badge.svg)](https://github.com/abach42/design-pattern-cheat-sheet/actions/workflows/ci.yml)
+[![Release](https://img.shields.io/github/v/release/abach42/design-pattern-cheat-sheet)](https://github.com/abach42/design-pattern-cheat-sheet/releases)
+![Java 21](https://img.shields.io/badge/Java-21-blue)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)
+
 A Java design patterns cheat sheet covering all 23 Gang of Four (GoF) patterns – creational, structural and behavioral – with short explanations, client code examples, runnable source code and JUnit tests.
 
 Use it in your daily Java work to quickly decide which design pattern fits a problem – or whether you need a pattern at all. Every pattern comes with its intent, when to use it and when to avoid it, a client code example, a link to the Java source code and a link to a JUnit test that shows how the pattern works.
