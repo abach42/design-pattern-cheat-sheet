@@ -8,34 +8,19 @@ Use it in your daily Java work to quickly decide which design pattern fits a pro
 
 ## Table of Contents
 
-**[Creational Design Patterns](#creational-design-patterns-in-java)**
-[Singleton](#singleton-pattern-in-java) ·
-[Factory Method](#factory-method-pattern-in-java) ·
-[Abstract Factory](#abstract-factory-pattern-in-java) ·
-[Builder](#builder-pattern-in-java) ·
-[Prototype](#prototype-pattern-in-java)
-
-**[Structural Design Patterns](#structural-design-patterns-in-java)**
-[Adapter](#adapter-pattern-in-java) ·
-[Bridge](#bridge-pattern-in-java) ·
-[Composite](#composite-pattern-in-java) ·
-[Decorator](#decorator-pattern-in-java) ·
-[Facade](#facade-pattern-in-java) ·
-[Flyweight](#flyweight-pattern-in-java) ·
-[Proxy](#proxy-pattern-in-java)
-
-**[Behavioral Design Patterns](#behavioral-design-patterns-in-java)**
-[Chain of Responsibility](#chain-of-responsibility-pattern-in-java) ·
-[Command](#command-pattern-in-java) ·
-[Interpreter](#interpreter-pattern-in-java) ·
-[Iterator](#iterator-pattern-in-java) ·
-[Mediator](#mediator-pattern-in-java) ·
-[Memento](#memento-pattern-in-java) ·
-[Observer](#observer-pattern-in-java) ·
-[State](#state-pattern-in-java) ·
-[Strategy](#strategy-pattern-in-java) ·
-[Template Method](#template-method-pattern-in-java) ·
-[Visitor](#visitor-pattern-in-java)
+| Creational Patterns | Structural Patterns | Behavioral Patterns |
+| :--- | :--- | :--- |
+| [Singleton](#singleton-pattern-in-java) | [Adapter](#adapter-pattern-in-java) | [Chain of Responsibility](#chain-of-responsibility-pattern-in-java) |
+| [Factory Method](#factory-method-pattern-in-java) | [Bridge](#bridge-pattern-in-java) | [Command](#command-pattern-in-java) |
+| [Abstract Factory](#abstract-factory-pattern-in-java) | [Composite](#composite-pattern-in-java) | [Interpreter](#interpreter-pattern-in-java) |
+| [Builder](#builder-pattern-in-java) | [Decorator](#decorator-pattern-in-java) | [Iterator](#iterator-pattern-in-java) |
+| [Prototype](#prototype-pattern-in-java) | [Facade](#facade-pattern-in-java) | [Mediator](#mediator-pattern-in-java) |
+| | [Flyweight](#flyweight-pattern-in-java) | [Memento](#memento-pattern-in-java) |
+| | [Proxy](#proxy-pattern-in-java) | [Observer](#observer-pattern-in-java) |
+| | | [State](#state-pattern-in-java) |
+| | | [Strategy](#strategy-pattern-in-java) |
+| | | [Template Method](#template-method-pattern-in-java) |
+| | | [Visitor](#visitor-pattern-in-java) |
 
 **More:** [Run the examples](#run-the-examples) · [References](#references) · [License](#license)
 
