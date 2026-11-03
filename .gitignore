@@ -28,6 +28,3 @@ target/*
 
 *.vscode
 *.idea
-
-mvnw*
-.mvn
