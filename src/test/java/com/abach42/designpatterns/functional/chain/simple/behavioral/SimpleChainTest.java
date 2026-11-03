@@ -29,7 +29,8 @@ public class SimpleChainTest {
         System.setOut(originalOut);
 
         String actualPrintedContent = outputStream.toString();
-        String expectedPrintedContent = "first handler\r\nsecond handler\r\n";
+        String nl = System.lineSeparator();
+        String expectedPrintedContent = "first handler" + nl + "second handler" + nl;
         assertEquals(expectedPrintedContent, actualPrintedContent);
     }
 }
