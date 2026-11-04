@@ -15,6 +15,7 @@ public class FilterHandler extends AbstractHandler {
     public void handle() {
         if (data.isEmpty()) {
             handleNext();
+            return;
         }
 
         Predicate<AbstractHandler.Member> filteredMember = member -> member.age() < minAge;

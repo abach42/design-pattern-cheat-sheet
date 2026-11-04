@@ -1,6 +1,5 @@
 package com.abach42.designpatterns.behavioral.chain.context;
 
-import java.util.Collections;
 import java.util.Comparator;
 
 public class SortByAgeHandler extends AbstractHandler {
@@ -13,9 +12,10 @@ public class SortByAgeHandler extends AbstractHandler {
     public void handle() {
         if (data.isEmpty()) {
             handleNext();
+            return;
         }
 
-        Collections.sort(data, Comparator.comparingInt(AbstractHandler.Member::age));
+        data.sort(Comparator.comparingInt(Member::age));
 
         handleNext();
     }
