@@ -7,14 +7,12 @@ public class CalculateDurationObserver extends AbstractObserver {
     public CalculateDurationObserver(ConcreteRoutingSubject subject) {
         super(subject);
 
-        this.visitor = (RouteEntity routeEntity) -> {
-            float calculatedDuration = calculateDuration(routeEntity);
-            routeEntity.setDuration(calculatedDuration);
-        };
+        this.visitor = (RouteEntity routeEntity) ->
+                routeEntity.setDuration(calculateDuration(routeEntity));
     }
 
+    // does not read the distance another observer wrote: the order of observers must not matter
     private float calculateDuration(RouteEntity entity) {
-        float duration = (float) entity.getDistance() / SPEED;
-        return duration;
+        return (float) entity.calculateDistance() / SPEED;
     }
 }

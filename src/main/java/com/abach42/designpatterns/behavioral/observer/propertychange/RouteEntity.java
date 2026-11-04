@@ -49,6 +49,13 @@ public class RouteEntity {
         this.distance = distance;
     }
 
+    // derived from location and destination only, so observers do not depend on each other
+    public double calculateDistance() {
+        int deltaX = destination.x - location.x;
+        int deltaY = destination.y - location.y;
+        return Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+    }
+
     public float getDuration() {
         return duration;
     }

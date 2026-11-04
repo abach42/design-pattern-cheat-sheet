@@ -11,13 +11,11 @@ public class CalculateDurationObserver extends AbstractObserver {
     @Override
     public void update() {
         RouteEntity entity = this.subject.getStateEntity();
-        float duration = calculateDuration(entity);
-
-        entity.setDuration(duration);
+        entity.setDuration(calculateDuration(entity));
     }
 
+    // does not read the distance another observer wrote: the order of observers must not matter
     private float calculateDuration(RouteEntity entity) {
-        float duration = (float) entity.getDistance() / SPEED;
-        return duration;
+        return (float) entity.calculateDistance() / SPEED;
     }
 }

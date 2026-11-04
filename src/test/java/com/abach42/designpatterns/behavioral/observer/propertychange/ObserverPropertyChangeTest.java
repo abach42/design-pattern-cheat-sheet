@@ -23,6 +23,20 @@ public class ObserverPropertyChangeTest {
     }
 
     @Test
+    @DisplayName("Result does not depend on the order observers are attached in")
+    public void testObserverOrderDoesNotMatter() {
+        ConcreteRoutingSubject subject = new ConcreteRoutingSubject();
+        AbstractObserver.createAndAttach(new CalculateDurationObserver(subject));
+        AbstractObserver.createAndAttach(new CalculateDistanceObserver(subject));
+
+        RouteEntity route = new RouteEntity("way home", new Point(0, 0), new Point(20, 20));
+        subject.setRouteEntity(route);
+
+        assertEquals(28.284271, route.getDistance(), 0.000001);
+        assertEquals(5.656854, route.getDuration(), 0.000001);
+    }
+
+    @Test
     @DisplayName("Observers listen and change distance but not duration")
     public void testObserverListenAndChangePartly() {
         ConcreteRoutingSubject subject = new ConcreteRoutingSubject();
