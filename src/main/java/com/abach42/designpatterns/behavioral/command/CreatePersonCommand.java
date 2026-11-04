@@ -12,7 +12,7 @@ public class CreatePersonCommand implements Command {
 
     @Override
     public void execute() {
-        Person newPerson = new Person(receiver.getNextId(), person.getName(), person.getAge());
+        Person newPerson = new Person(receiver.getNextId(), person.name(), person.age());
         receiver.addPerson(newPerson);
     }
 }

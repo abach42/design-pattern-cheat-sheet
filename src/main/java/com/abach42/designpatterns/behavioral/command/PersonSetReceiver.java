@@ -14,14 +14,14 @@ public class PersonSetReceiver extends LinkedHashSet<Person> {
             return 1L;
         }
 
-        return getLast().getId() + 1L;
+        return getLast().id() + 1L;
     }
 
     public void deletePersonById(Person person) {
-        if (null == person.getId()) {
+        if (null == person.id()) {
             throw new InvalidParameterException("Person needs an Id to be deleted");
         }
 
-        removeIf(updatedPerson -> person.getId().equals(updatedPerson.getId()));
+        removeIf(updatedPerson -> person.id().equals(updatedPerson.id()));
     }
 }

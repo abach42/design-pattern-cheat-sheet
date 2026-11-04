@@ -39,8 +39,8 @@ public class CommandTest {
         invoker.runCommand();
 
         assertEquals(3, list.size());
-        assertEquals(1L, list.getFirst().getId());
-        assertEquals(3L, list.getLast().getId());
+        assertEquals(1L, list.getFirst().id());
+        assertEquals(3L, list.getLast().id());
     }
 
     @Test
