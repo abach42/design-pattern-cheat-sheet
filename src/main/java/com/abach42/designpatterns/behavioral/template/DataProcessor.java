@@ -5,7 +5,8 @@ import java.util.List;
 public abstract class DataProcessor {
 
     // to simplify usage, you could collect your "actions"
-    public void processData() {
+    // final: subclasses fill in the steps, but must not change their order
+    public final void processData() {
         List<Data> dataList = fetchData();
         process(dataList);
         saveData(dataList);
