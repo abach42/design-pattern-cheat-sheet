@@ -2,19 +2,35 @@ package com.abach42.designpatterns.behavioral.template;
 
 import java.util.List;
 
-public abstract class DataProcessor {
+/**
+ * Abstract class: owns the template method and the invariant steps.
+ */
+public abstract class DataProcessor<T> {
 
-    // to simplify usage, you could collect your "actions"
-    // final: subclasses fill in the steps, but must not change their order
+    private List<T> savedData = List.of();
+
+    // template method; final, so subclasses cannot change the order of the steps
     public final void processData() {
-        List<Data> dataList = fetchData();
-        process(dataList);
-        saveData(dataList);
+        List<T> dataList = fetchData();
+        List<T> processed = process(dataList);
+        saveData(processed);
     }
 
-    protected abstract List<Data> fetchData();
+    public List<T> getSavedData() {
+        return savedData;
+    }
 
-    protected abstract void process(List<Data> dataList);
+    // primitive operation: every subclass must provide it
+    protected abstract List<T> fetchData();
 
-    protected abstract void saveData(List<Data> dataList);
+    // hook: default keeps the data unchanged, subclasses may override
+    protected List<T> process(List<T> dataList) {
+        return dataList;
+    }
+
+    // invariant step: the same for every subclass
+    private void saveData(List<T> dataList) {
+        // simulates writing the data back to a database
+        savedData = List.copyOf(dataList);
+    }
 }

@@ -1,48 +1,30 @@
 package com.abach42.designpatterns.behavioral.template;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertInstanceOf;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.List;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-public class TemplateMethodTest {
+class TemplateMethodTest {
 
     @Test
-    public void testUserProcessorFetch() {
-        UserProcessor userProcessor = new UserProcessor();
-        List<Data> dataList = userProcessor.fetchData();
-        assertEquals(2, dataList.size());
-        assertInstanceOf(UserData.class, dataList.getFirst());
-        assertEquals("John", ((UserData)dataList.getFirst()).getName());
+    @DisplayName("Should save users sorted by name, because the process hook is overridden")
+    void testUserProcessorOverridesHook() {
+        UserProcessor processor = new UserProcessor();
+        processor.processData();
+
+        assertEquals(List.of(new UserData("Alice"), new UserData("John")), processor.getSavedData());
     }
 
     @Test
-    public void testProductProcessorFetch() {
-        ProductProcessor productProcessor = new ProductProcessor();
-        List<Data> dataList = productProcessor.fetchData();
+    @DisplayName("Should save products as fetched, because the process hook keeps its default")
+    void testProductProcessorUsesDefaultHook() {
+        ProductProcessor processor = new ProductProcessor();
+        processor.processData();
 
-        assertEquals(2, dataList.size());
-        assertInstanceOf(ProductData.class, dataList.getFirst());
-        assertEquals("Laptop", ((ProductData) dataList.get(0)).getName());
-        assertEquals(999, ((ProductData) dataList.get(0)).getPrice(), 0.001);
-
-        assertInstanceOf(ProductData.class, dataList.get(1));
-        assertEquals("Phone", ((ProductData) dataList.get(1)).getName());
-        assertEquals(599, ((ProductData) dataList.get(1)).getPrice(), 0.001);
-    }
-
-    @Test
-    public void testUserData() {
-        UserData userData = new UserData("John");
-        assertEquals("John", userData.getName());
-    }
-
-    @Test
-    public void testProductData() {
-        ProductData productData = new ProductData("Laptop", 999);
-        assertEquals("Laptop", productData.getName());
-        assertEquals(999, productData.getPrice(), 0.001);
+        assertEquals(
+                List.of(new ProductData("Laptop", 999), new ProductData("Phone", 599)),
+                processor.getSavedData());
     }
 }

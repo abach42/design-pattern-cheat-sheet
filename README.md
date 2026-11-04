@@ -737,10 +737,12 @@ It’s a way to outline the steps of a process while letting subclasses fill in 
 
 ```java
 UserProcessor userProcessor = new UserProcessor();
-List<Data> dataList = userProcessor.fetchData();
+userProcessor.processData();
+userProcessor.getSavedData();       // [Alice, John] - overrides the process hook
 
 ProductProcessor productProcessor = new ProductProcessor();
-List<Data> dataList = productProcessor.fetchData();
+productProcessor.processData();
+productProcessor.getSavedData();    // [Laptop 999, Phone 599] - keeps the default hook
 ```
 
 ### Visitor Pattern in Java
