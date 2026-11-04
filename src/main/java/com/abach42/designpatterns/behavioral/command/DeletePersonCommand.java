@@ -2,16 +2,16 @@ package com.abach42.designpatterns.behavioral.command;
 
 public class DeletePersonCommand implements Command {
 
-    private final PersonSetReceiver receiver;
-    private final Person person;
+    private final PersonReceiver receiver;
+    private final long id;
 
-    public DeletePersonCommand(PersonSetReceiver receiver, Person person) {
+    public DeletePersonCommand(PersonReceiver receiver, long id) {
         this.receiver = receiver;
-        this.person = person;
+        this.id = id;
     }
 
     @Override
     public void execute() {
-        receiver.deletePersonById(person);
+        receiver.deletePerson(id);
     }
 }

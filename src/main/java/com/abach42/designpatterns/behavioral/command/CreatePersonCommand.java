@@ -2,17 +2,18 @@ package com.abach42.designpatterns.behavioral.command;
 
 public class CreatePersonCommand implements Command {
 
-    private final PersonSetReceiver receiver;
-    private final Person person;
+    private final PersonReceiver receiver;
+    private final String name;
+    private final Integer age;
 
-    public CreatePersonCommand(PersonSetReceiver receiver, Person person) {
+    public CreatePersonCommand(PersonReceiver receiver, String name, Integer age) {
         this.receiver = receiver;
-        this.person = person;
+        this.name = name;
+        this.age = age;
     }
 
     @Override
     public void execute() {
-        Person newPerson = new Person(receiver.getNextId(), person.name(), person.age());
-        receiver.addPerson(newPerson);
+        receiver.createPerson(name, age);
     }
 }

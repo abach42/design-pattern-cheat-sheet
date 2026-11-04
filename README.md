@@ -482,22 +482,22 @@ This behavioral pattern separates tasks into small steps, enables high reusabili
 
 :pill: [Command JUnit test](src/test/java/com/abach42/designpatterns/behavioral/command/CommandTest.java)
 
-In this example the receiver also acts as data storage; both could be separated. The `Person` type is immutable but not implemented as a record, to provide multiple constructors.
+In this example the receiver also acts as data storage; both could be separated. It hands out ids from a counter, so ids stay unique after updates and deletes. The invoker removes each command from its queue when it runs it.
 
 #### Command client code example
 
 ```java
 PersonInvoker invoker = new PersonInvoker();
-PersonSetReceiver list = new PersonSetReceiver();
+PersonReceiver receiver = new PersonReceiver();
 
-invoker.setCommand(new CreatePersonCommand(list, new Person("John", 62)));
-invoker.setCommand(new CreatePersonCommand(list, new Person("Peter", 43)));
-invoker.setCommand(new CreatePersonCommand(list, new Person("James", 21)));
+invoker.addCommand(new CreatePersonCommand(receiver, "John", 62));
+invoker.addCommand(new CreatePersonCommand(receiver, "Peter", 43));
+invoker.addCommand(new CreatePersonCommand(receiver, "James", 21));
 
-invoker.setCommand(new UpdatePersonCommand(list, new Person(1L, "Paul", 34)));
-invoker.setCommand(new DeletePersonCommand(list, new Person(1L)));
+invoker.addCommand(new UpdatePersonCommand(receiver, new Person(1L, "Paul", 34)));
+invoker.addCommand(new DeletePersonCommand(receiver, 1L));
 
-invoker.runCommand();
+invoker.runCommands();
 ``` 
 
 ### Interpreter Pattern in Java
