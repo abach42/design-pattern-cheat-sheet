@@ -11,7 +11,7 @@ public class SortByAgeHandler implements Handable {
             return memberList;
         }
 
-        Collections.sort(memberList, Comparator.comparingInt(Chain.Member::age));
+        memberList.sort(Comparator.comparingInt(Chain.Member::age));
 
         return memberList;
     }
