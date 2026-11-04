@@ -31,8 +31,8 @@ public class VisitorTest {
     @Test
     @DisplayName("Should set isHealthChecked status to true on all animal element")
     public void testCareAnimals() {
-        Visitor veterinarianVistitor = new VeterinarianVisitor();
-        zoo.visitAnimals(veterinarianVistitor);
+        Visitor veterinarianVisitor = new VeterinarianVisitor();
+        zoo.visitAnimals(veterinarianVisitor);
 
         for (Element animal : zoo.getAnimals()) {
             assertTrue(animal.isHealthChecked());
