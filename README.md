@@ -1,6 +1,5 @@
 # Java Design Patterns Cheat Sheet – Gang of Four (GoF) Examples
 
-[![CI](https://github.com/abach42/design-pattern-cheat-sheet/actions/workflows/ci.yml/badge.svg)](https://github.com/abach42/design-pattern-cheat-sheet/actions/workflows/ci.yml)
 [![Release](https://img.shields.io/github/v/release/abach42/design-pattern-cheat-sheet)](https://github.com/abach42/design-pattern-cheat-sheet/releases)
 ![Java 21](https://img.shields.io/badge/Java-21-blue)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)
